@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duitsland Quiz</title>
+    <link rel="stylesheet" href="../css/du.css">
+</head>
+<body>
+    <main>
+        <div class="question">
+            <h2 id="questionText">Question Placeholder</h2>
+            <form>
+                <div class="choices">
+                    <div class="choice">
+                        <input type="radio" id="option_a" name="capital" value="berlin">
+                        <label for="option_a">A) Berlin</label>
+                    </div>
+                    <div class="choice">
+                        <input type="radio" id="option_b" name="capital" value="munich">
+                        <label for="option_b">B) Munich</label>
+                    </div>
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        <input type="radio" id="option_c" name="capital" value="frankfurt">
+                        <label for="option_c">C) Frankfurt</label>
+                    </div>
+                    <div class="choice">
+                        <input type="radio" id="option_d" name="capital" value="hamburg">
+                        <label for="option_d">D) Hamburg</label>
+                    </div>
+                </div>
+                <input type="button" id="submitAnswer" value="Antwoord indienen">
+                <input type="button" id="nextQuestion" style="display:none;" value="Volgende vraag">
+            </form>
+        </div>
+    </main>
+    
+    <script src="../js/du.js"></script>
+</body>
+</html>
