@@ -83,4 +83,18 @@ input[type="submit"] {
 }
 
 
-/* Your existing CSS */
+input[type="button"] {
+    background-color: rgb(255, 145, 0); /* Oranje achtergrondkleur */
+    color: white; /* Witte tekstkleur */
+    padding: 10px 20px; /* Padding aanpassen */
+    border: none; /* Geen rand */
+    border-radius: 5px; /* Afgeronde hoeken */
+    cursor: pointer; /* Cursor veranderen naar pointer bij hover */
+    font-family: 'myFont2', sans-serif; /* Lettertype instellen */
+    font-size: 20px; /* Tekengrootte aanpassen */
+    margin-top: 10px; /* Bovenmarge toevoegen */
+}
+
+input[type="button"]:hover {
+    background-color: rgb(255, 120, 0); /* Donkerder oranje bij hover */
+}
