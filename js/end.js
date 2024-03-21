@@ -23,8 +23,15 @@ function nextQuestion() {
 }
 
 function showResult() {
-    updateScore(totalCorrect);
-    document.getElementById("result").textContent = "Je hebt " + totalCorrect + " van de 15 vragen goed beantwoord.";
+    // updateScore(totalCorrect); // Deze functie lijkt niet gedefinieerd te zijn, zorg ervoor dat je deze hebt gedefinieerd als dat nodig is
+    document.getElementById("result").textContent = "Je hebt " + totalCorrect + " van de 10 vragen goed beantwoord.";
+
+    // Verwijder de scoreparameter uit de URL
+    var url = window.location.href.split("?")[0] + "?quiz=nl"; // Basis-URL met de gewenste querystring
+    window.history.replaceState({}, document.title, url); // Vervang de huidige URL in de geschiedenis zonder de scoreparameter
+
+    // Navigeer naar de eindpagina
+    window.location.href = "end.html?quiz=nl";
 }
 
 function updateScore(score) {
@@ -33,13 +40,12 @@ function updateScore(score) {
 
     const scoreBox = document.querySelector(".score-box");
     const percent = (score / 15) * 100;
-    scoreBox.style.background = `linear-gradient(to right, red 0%, green ${percent}%, red ${percent}%, red 100%)`;
 }
 
 // document.getElementById("question1").style.display = "block";
 
 const checkCurrentQuiz = () => {
-    const queryString = window.location.search;
+    const queryString = window.location.search.split('&')[0];
     if (queryString === "?quiz=nl") {
         // Show Belgium and France photos
         document.getElementById('quiz-link-1').innerHTML = `<a href="www.google.com">
@@ -60,7 +66,7 @@ const checkCurrentQuiz = () => {
         
         The Dutch are pioneers in various fields, from art and design to technology and sustainable living. Rembrandt and Van Gogh are celebrated Dutch artists whose works continue to inspire generations, while Dutch designers like Piet Mondrian and Gerrit Rietveld have left an indelible mark on the world of modern design. In terms of technology and innovation, the Netherlands leads the way with advancements in renewable energy, urban planning, and agriculture.`
         
-    } else if (queryString === "?quiz=be") {
+    } else if (queryString === "?quiz=be&score=") {
         // Show Netherlands, France, and Germany photos
         document.getElementById('quiz-link-1').innerHTML = `<a href="www.google.com">
         <img src="../media/Netherlands.jpg" alt="Quiz 1">
@@ -125,4 +131,14 @@ const checkCurrentQuiz = () => {
 
 document.addEventListener("DOMContentLoaded", function() {
     checkCurrentQuiz();
+
+
+});
+document.addEventListener("DOMContentLoaded", function() {
+    // Extract the score from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const score = urlParams.get('score');
+    
+    // Update the score
+    updateScore(score);
 });

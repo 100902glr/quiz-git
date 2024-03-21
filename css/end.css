@@ -22,9 +22,10 @@ h3  {
     color: white;
 }
 p {
-    font-family: myFont2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
  font-weight: bold;
     color: white;
+    text-align: start;
 }
 .background-container {
     position: fixed;
@@ -75,10 +76,11 @@ p {
     color: white;
     font-size: 24px;
     position: absolute;
-    top: 50%;
+    top: 95px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    margin-left: 60px;
 }
 
 .score-box:before {

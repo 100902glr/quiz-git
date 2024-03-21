@@ -103,56 +103,16 @@ var questions = [
         ],
         correctAnswer: "1989"
     },
-     // Open Questions
-     {
-        question: "how many millions are the population of Germany?",
-        correctAnswer: "83"
-    },
-    {
-        question: "Name three famous German composers.",
-        correctAnswer: "Johann Sebastian Bach, Ludwig van Beethoven, Wolfgang Amadeus Mozart"
-    },
-    {
-        question: "What is the name of the longest river in Germany?",
-        correctAnswer: "The Rhine"
-    },
-    {
-        question: "What is the meaning of the word 'Autobahn' in German?",
-        correctAnswer: "Highway or motorway"
-    },
-    {
-        question: "Which city is known as the 'Media Capital of Germany'?",
-        correctAnswer: "Cologne"
-    }
+    
 ];
 
 // Set initial question index
 var currentQuestionIndex = 0;
 
+var totalCorrect = 0;
+
 // Function to display the current question and choices
 function displayQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];
-    var questionTextElement = document.getElementById('questionText');
-    if (questionTextElement) {
-        questionTextElement.textContent = currentQuestion.question;
-    } else {
-        console.error("Error: questionText element not found.");
-    }
-    
-    var choiceLabels = document.querySelectorAll('.choice label');
-    choiceLabels.forEach(function(label, index) {
-        label.textContent = currentQuestion.choices[index];
-    });
-}
-
-// Function to check the selected answer and proceed to the next question
-// Function to display the current question and choices
-function displayQuestion() {
-    // Remove previous event listener for 'Submit Answer' button
-    var submitAnswerButton = document.getElementById('submitAnswer');
-    // var submitAnswerButton = submitAnswerButton.cloneNode(true);
-    // submitAnswerButton.parentNode.replaceChild(submitAnswerButton, submitAnswerButton);
-
     var currentQuestion = questions[currentQuestionIndex];
     var questionTextElement = document.getElementById('questionText');
     if (questionTextElement) {
@@ -171,11 +131,13 @@ function displayQuestion() {
     choiceInputs.forEach((input, index) => {
         input.value = currentQuestion.choices[index].toLowerCase();
     });
-    // Detach event listener if exists 
-    submitAnswerButton.removeEventListener('click', submitAnswerFunction);
+
+    // Define submitAnswerButton within the scope of this function
+    var submitAnswerButton = document.getElementById('submitAnswer');
     // Attach event listener for 'Submit Answer' button
     submitAnswerButton.addEventListener('click', submitAnswerFunction);
 }
+
 
 const submitAnswerFunction = () => {
     // Get the selected answer
@@ -187,6 +149,8 @@ const submitAnswerFunction = () => {
         if(selectedAnswer.value.toLowerCase() === questions[currentQuestionIndex].correctAnswer.toLowerCase()) {
             // Apply green background to the correct choice
             selectedAnswer.parentElement.style.backgroundColor = "green";
+            // Increase total correct count
+            totalCorrect++;
         } else {
             // Apply red background to the incorrect choice
             selectedAnswer.parentElement.style.backgroundColor = "red";
@@ -240,9 +204,14 @@ document.getElementById('nextQuestion').addEventListener('click', function() {
         // Show the 'Submit Answer' button
         document.getElementById('submitAnswer').style.display = "block";
     } else {
-        alert("Congratulations! You have completed the quiz.");
+        window.location.href = "end.html?quiz=nl&score=" + totalCorrect; // Pass the score as a query parameter
     }
 });
+
+function updateScore(score) {
+    var scoreElement = document.getElementById("score");
+    scoreElement.textContent = score + " van de 5 vragen correct beantwoord";
+}
 
 // Display the first question initially
 displayQuestion();

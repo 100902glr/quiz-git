@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einde Quiz.</title>
     <link rel="stylesheet" href="../css/end.css">
-
-
-    
 </head>
 <body>
     <div class="background-container"></div>
     <div class="container">
-        <h1 class="center">Eind Resultaat</h2>
+        <h1 class="center">Eind Resultaat</h1>
         <div class="results">
             
         </div>
@@ -43,5 +40,20 @@
         </div>
     </div>
 <script src="../js/end.js"></script>
+<script>
+    // Function to get query parameters from URL
+    function getQueryParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Get the score from the URL
+    var score = getQueryParameter('score');
+
+    // Display the score
+    document.getElementById('score').textContent = score + " van de 10 vragen goed beantwoord.";
+</script>
 </body>
 </html>
