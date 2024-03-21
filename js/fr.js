@@ -34,7 +34,7 @@ var questions = [
         choices: [
             "Mont Blanc, in de Pyreneeën",
             "Mont Blanc, in de Vogezen",
-            "Mont Ventoux, in de Alpen",
+            "Mont Blanc, in de Alpen",
             "Mont Ventoux, in de Jura"
         ],
         correctAnswer: "Mont Blanc, in de Alpen"
