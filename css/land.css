@@ -12,21 +12,13 @@ body {
 }
 @font-face {
     font-family: "myFont";
-    src: url("../fonts/horseshoes_and_lemonade/horseshoes.ttf") format("truetype");
+    src: url("../fonts/horseshoes_and_lemonade/Truculenta-VariableFont_opsz\,wdth\,wght.ttf") format("truetype");
 }
 @font-face {
     font-family: "myFont2";
-    src: url("../fonts/komyca/Komyca3Dfreeversion-Italic.ttf") format("truetype");
+    src: url("../fonts/komyca/DonegalOne-Regular.ttf") format("truetype");
 }
-#nextQuestion, #submitAnswer {
-background-color: darkgoldenrod;
-height: 40px;
-width: 180px;
-border-radius: 40px;
-border: none;
-font-family: myFont;
-font-size: larger;
-}
+
 main {
     padding: 20px;
 }
@@ -74,14 +66,14 @@ input[type="submit"] {
 
 /* Your existing CSS */
 
-.choices {
+.choices{
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Evenly distribute choices */
     margin-bottom: 10px;
 }
 
-.choice {
+.choice, .submitAnswer{
     flex-basis: 48%; /* Adjust width to fit two choices in a row */
     background-color: rgb(255, 145, 0);
     border-radius: 20px;
@@ -91,4 +83,18 @@ input[type="submit"] {
 }
 
 
-/* Your existing CSS */
+input[type="button"] {
+    background-color: rgb(255, 145, 0); /* Oranje achtergrondkleur */
+    color: white; /* Witte tekstkleur */
+    padding: 10px 20px; /* Padding aanpassen */
+    border: none; /* Geen rand */
+    border-radius: 5px; /* Afgeronde hoeken */
+    cursor: pointer; /* Cursor veranderen naar pointer bij hover */
+    font-family: 'myFont2', sans-serif; /* Lettertype instellen */
+    font-size: 20px; /* Tekengrootte aanpassen */
+    margin-top: 10px; /* Bovenmarge toevoegen */
+}
+
+input[type="button"]:hover {
+    background-color: rgb(255, 120, 0); /* Donkerder oranje bij hover */
+}
