@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belgium Quiz</title>
+    <link rel="stylesheet" href="../css/be.css">
+</head>
+<body>
+    <div class="background-container">
+    </div>
+    <main>
+        <div class="container">
+        <div class="question">
+            <h2 id="questionText">What is the capital of Belgium?</h2>
+            <form>
+                <div class="choices">
+                    <div class="choice">
+                        <input type="radio" id="option_a" name="capital" value="brussels">
+                        <label for="option_a">A) Brussels</label>
+                    </div>
+                    <div class="choice">
+                        <input type="radio" id="option_b" name="capital" value="antwerp">
+                        <label for="option_b">B) Antwerp</label>
+                    </div>
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        <input type="radio" id="option_c" name="capital" value="ghent">
+                        <label for="option_c">C) Ghent</label>
+                    </div>
+                    <div class="choice">
+                        <input type="radio" id="option_d" name="capital" value="bruges">
+                        <label for="option_d">D) Bruges</label>
+                    </div>
+                </div>
+                <input type="button" id="submitAnswer" value="Antwoord Indienen">
+                <input type="button" id="nextQuestion" style="display:none;" value="Volgende Vraag">
+            </form>
+        </div>
+    </div>
+    </main>
+    
+    <script src="../js/be.js"></script>
+
+</body>
+</html>
