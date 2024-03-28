@@ -13,7 +13,7 @@ body{
 }
 
 .app{
-    background: #fff;
+    background: black;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
@@ -54,7 +54,7 @@ transition: all 0.3s;
 }
 
 .btn:hover:not([disabled]) {
-   background: #222;
+   background: orange;
    color: #fff; 
 }
 .btn:disabled{
