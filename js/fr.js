@@ -50,6 +50,67 @@ var questions = [
         correctAnswer: "Édith Piaf"
     },
 
+    {
+        question: "Wat is de beroemde Franse lekkernij die bestaat uit laagjes bladerdeeg, gevuld met banketbakkersroom en bedekt met een glazuur van karamel?",
+        choices: [
+            "Croissant",
+            "Éclair",
+            "Macaron",
+            "Millefeuille"
+        ],
+        correctAnswer: "Millefeuille"
+    },
+    {
+        question: "Welke Franse stad staat bekend als de hoofdstad van de parfumindustrie?",
+        choices: [
+            "Nice",
+            "Marseille",
+            "Cannes",
+            "Grasse"
+        ],
+        correctAnswer: "Grasse"
+    },
+    {
+        question: "Wie was de beroemde Franse keizer die bekend staat om zijn militaire veroveringen en de introductie van het Napoleontische rechtssysteem?",
+        choices: [
+            "Napoleon Bonaparte",
+            "Louis XIV",
+            "Charlemagne",
+            "François Hollande"
+        ],
+        correctAnswer: "Napoleon Bonaparte"
+    },
+    {
+        question: "Wat is de traditionele Franse dans die vaak wordt geassocieerd met de Moulin Rouge en de Belle Époque?",
+        choices: [
+            "Ballet",
+            "Can-Can",
+            "Tango",
+            "Wals"
+        ],
+        correctAnswer: "Can-Can"
+    },
+    {
+        question: "Wat is de beroemde Franse lekkernij die bestaat uit laagjes bladerdeeg, gevuld met banketbakkersroom en bedekt met een glazuur van karamel?",
+        correctAnswer: "Millefeuille"
+    },
+    {
+        question: "Welke Franse stad staat bekend als de hoofdstad van de parfumindustrie?",
+        correctAnswer: "Grasse"
+    },
+    {
+        question: "Wie was de beroemde Franse keizer die bekend staat om zijn militaire veroveringen en de introductie van het Napoleontische rechtssysteem?",
+        correctAnswer: "Napoleon Bonaparte"
+    },
+    {
+        question: "Wat is de traditionele Franse dans die vaak wordt geassocieerd met de Moulin Rouge en de Belle Époque?",
+        correctAnswer: "Can-Can"
+    },
+    {
+        question: "Wat is een bekend Frans gerecht dat bestaat uit slakken gekookt met knoflookboter en kruiden?",
+        correctAnswer: "Escargots"
+    }
+
 ];
 
 // Set initial question index
@@ -118,7 +179,7 @@ const submitAnswerFunction = () => {
         // Show the 'Next Question' button
         document.getElementById('nextQuestion').style.display = "block";
     } else {
-        alert("Please select an answer.");
+        alert("Selecteer graag een antwoord..");
     }
 }
 
