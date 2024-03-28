@@ -212,7 +212,7 @@ document.getElementById('nextQuestion').addEventListener('click', function() {
         // Show the 'Submit Answer' button
         document.getElementById('submitAnswer').style.display = "block";
     } else {
-        window.location.href = "end.html?quiz=nl&score=" + totalCorrect; // Pass the score as a query parameter
+        window.location.href = "end.html?quiz=fr&score=" + totalCorrect; // Pass the score as a query parameter
     }
 });
 
