@@ -126,7 +126,7 @@ function displayQuestion() {
     if (questionTextElement) {
         questionTextElement.textContent = currentQuestion.question;
     } else {
-        console.error("Error: questionText element not found.");
+        console.error("ERROR: Element niet gevonden.");
     }
     
     var choiceLabels = document.querySelectorAll('.choice label');
