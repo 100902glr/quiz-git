@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../media/duitsland.jpeg');
+    background-image: url('../media/french.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -75,7 +75,7 @@ input[type="submit"] {
 
 .choice, .submitAnswer{
     flex-basis: 48%; /* Adjust width to fit two choices in a row */
-    background-color: rgb(255, 145, 0);
+    background-color: rgb(0, 140, 255);
     border-radius: 20px;
     font-size: 20px;
     font-family: myFont2;
@@ -84,7 +84,7 @@ input[type="submit"] {
 
 
 input[type="button"] {
-    background-color: rgb(255, 145, 0); /* Oranje achtergrondkleur */
+    background-color: rgb(0, 140, 255); /* Oranje achtergrondkleur */
     color: white; /* Witte tekstkleur */
     padding: 10px 20px; /* Padding aanpassen */
     border: none; /* Geen rand */
@@ -96,5 +96,5 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: rgb(255, 120, 0); /* Donkerder oranje bij hover */
+    background-color: rgb(0, 94, 255); /* Donkerder oranje bij hover */
 }

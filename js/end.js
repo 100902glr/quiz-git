@@ -48,15 +48,15 @@ const checkCurrentQuiz = () => {
     const queryString = window.location.search.split('&')[0];
     if (queryString === "?quiz=nl") {
         // Show Belgium and France photos
-        document.getElementById('quiz-link-1').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-1').innerHTML = `<a href="../page's/belgie.html>
         <img src="../media/Belgium.jpg" alt="Quiz 1">
         <p>Quiz 1</p>
          </a>`
-        document.getElementById('quiz-link-2').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-2').innerHTML = `<a href="../page's/frankrijk.html">
         <img src="../media/France.jpg" alt="Quiz 1">
          <p>Quiz 2</p>
          </a>`
-        document.getElementById('quiz-link-3').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-3').innerHTML = `<a href="../page's/duitsland.html">
          <img src="../media/Germany.jpg" alt="Quiz 1">
          <p>Quiz 3</p>
         </a>`
@@ -68,15 +68,15 @@ const checkCurrentQuiz = () => {
         
     } else if (queryString === "?quiz=be") {
         // Show Netherlands, France, and Germany photos
-        document.getElementById('quiz-link-1').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-1').innerHTML = `<a href="../page's/nl.html">
         <img src="../media/Netherlands.jpg" alt="Quiz 1">
         <p>Quiz 1</p>
          </a>`
-        document.getElementById('quiz-link-2').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-2').innerHTML = `<a href="../page's/frankrijk.html">
         <img src="../media/France.jpg" alt="Quiz 1">
          <p>Quiz 2</p>
          </a>`
-        document.getElementById('quiz-link-3').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-3').innerHTML = `<a href="../page's/duitsland.html">
          <img src="../media/Germany.jpg" alt="Quiz 1">
          <p>Quiz 3</p>
         </a>`
@@ -95,15 +95,15 @@ const checkCurrentQuiz = () => {
         En zo eindigde het verhaal van de tien vragen van België, een verhaal dat de rijke cultuur en geschiedenis van het land weerspiegelde.`
     } else if (queryString === "?quiz=du") {
         // Show Netherlands, Belgium, and farnce photos
-        document.getElementById('quiz-link-1').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-1').innerHTML = `<a href="../page's/belgie.html">
         <img src="../media/Belgium.jpg" alt="Quiz 1">
         <p>Quiz 1</p>
          </a>`
-        document.getElementById('quiz-link-2').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-2').innerHTML = `<a href="../page's/frankrijk.html">
         <img src="../media/France.jpg" alt="Quiz 1">
          <p>Quiz 2</p>
          </a>`
-        document.getElementById('quiz-link-3').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-3').innerHTML = `<a href="../page's/nl.html">
          <img src="../media/Netherlands.jpg" alt="Quiz 1">
          <p>Quiz 3</p>
         </a>`
@@ -117,23 +117,31 @@ const checkCurrentQuiz = () => {
     }
     else if (queryString === "?quiz=fr") {
         // Show Netherlands, Belgium, and Germany photos
-        document.getElementById('quiz-link-1').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-1').innerHTML = `<a href="../page's/belgie.html">
         <img src="../media/Belgium.jpg" alt="Quiz 1">
         <p>Quiz 1</p>
          </a>`
-        document.getElementById('quiz-link-2').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-2').innerHTML = `<a href="../page's/nl.html">
         <img src="../media/Netherlands.jpg" alt="Quiz 1">
          <p>Quiz 2</p>
          </a>`
-        document.getElementById('quiz-link-3').innerHTML = `<a href="www.google.com">
+        document.getElementById('quiz-link-3').innerHTML = `<a href="../page's/duitsland.html">
          <img src="../media/Germany.jpg" alt="Quiz 1">
          <p>Quiz 3</p>
         </a>`
-        document.getElementById('info').innerHTML =`France, often hailed as the epitome of sophistication and elegance, captivates with its timeless charm and cultural richness. Paris, the capital city, stands as a symbol of romance, art, and gastronomy. From the iconic Eiffel Tower to the masterpieces housed in the Louvre Museum, Paris offers a glimpse into France's illustrious past and vibrant present.
+        document.getElementById('info').innerHTML =`Frankrijk, officieel bekend als de Franse Republiek, is een land dat bekend staat om zijn rijke geschiedenis, cultuur en invloed op wereldwijde kunst, mode, keuken en politiek. Gelegen in West-Europa, wordt Frankrijk begrensd door België, Luxemburg, Duitsland, Zwitserland, Italië, Monaco, Spanje, Andorra en de Middellandse Zee. Het land heeft een diverse geografie, variërend van de bergketens van de Alpen en de Pyreneeën tot vlaktes en kustlijnen.
 
-        Beyond Paris, France's landscape unfolds into a diverse tapestry of regions, each with its own distinct character. The sun-drenched vineyards of Bordeaux produce some of the world's finest wines, while the lavender fields of Provence evoke a sense of tranquility and beauty. Along the French Riviera, glamorous cities like Nice and Cannes beckon with their azure waters and luxurious resorts.
+        Parijs, de hoofdstad van Frankrijk, is wereldberoemd vanwege iconische bezienswaardigheden zoals de Eiffeltoren, de Notre-Dame en het Louvre Museum. Het land heeft ook tal van andere historische steden en pittoreske dorpen, waaronder Lyon, Marseille, Nice en Straatsburg.
         
-        France's cultural influence extends far beyond its borders, encompassing art, literature, fashion, and cuisine. The works of French artists like Monet, Renoir, and Picasso adorn museum walls worldwide, while fashion houses like Chanel and Louis Vuitton set trends on the global stage. French cuisine, with its emphasis on fresh ingredients and meticulous preparation, delights epicureans with dishes ranging from coq au vin to crème brûlée.`
+        Frankrijk staat bekend om zijn culinaire tradities, waaronder gerechten als croissants, escargots, coq au vin en boeuf bourguignon. Wijnproductie is ook een belangrijk onderdeel van de Franse cultuur, met regio's zoals Bordeaux, Bourgogne en de Champagne die wereldberoemde wijnen produceren.
+        
+        Politiek gezien is Frankrijk een democratische republiek met een presidentieel systeem. Het is een van de grondleggers van de Europese Unie en speelt een belangrijke rol in internationale zaken en diplomatie.
+        
+        Op het gebied van kunst en literatuur heeft Frankrijk een rijke erfenis, met invloedrijke figuren zoals Victor Hugo, Emile Zola, Claude Monet en Auguste Rodin. Het land herbergt ook enkele van 's werelds meest prestigieuze kunstmusea en galerieën.
+        
+        Economisch gezien is Frankrijk een van 's werelds grootste economieën en een belangrijke speler in sectoren als toerisme, landbouw, technologie, luchtvaart, auto-industrie en luxe goederen.
+        
+        Met zijn mix van geschiedenis, cultuur, natuurlijke schoonheid en gastronomie blijft Frankrijk een van de meest geliefde bestemmingen voor reizigers over de hele wereld.`
     }
 }
 
