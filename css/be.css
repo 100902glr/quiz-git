@@ -1,7 +1,7 @@
 body {
     font-family: "myFont2";
     src: url("../fonts/komyca/DonegalOne-Regular.ttf") format("truetype");
-    background-image: url('https://www.columbusmagazine.nl/img/1135980/1366/590?v=1645707526');
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2020/05/10/ghent-belgium-wallpaper.jpg');
     /* Achtergrondafbeelding van de Belgische vlag */
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
 }
 

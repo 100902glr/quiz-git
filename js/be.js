@@ -1,6 +1,6 @@
 var questions = [
     {
-        question: "1. Wat is het favoriete snackgerecht van Belgen, bestaande uit frietjes met mayonaise?",
+        question: "Wat is het favoriete snackgerecht van Belgen, bestaande uit frietjes met mayonaise?",
         choices: [
             "Mosselen met friet",
             "Stoofvlees met friet",
@@ -10,7 +10,7 @@ var questions = [
         correctAnswer: "Stoofvlees met friet"
     },
     {
-        question: "2. Welk beroemd Belgisch stripfiguur heeft een hond genaamd Bobbie en woont in een molen?",
+        question: "Welk beroemd Belgisch stripfiguur heeft een hond genaamd Bobbie en woont in een molen?",
         choices: [
             "Suske en Wiske",
             "Kuifje",
@@ -20,7 +20,7 @@ var questions = [
         correctAnswer: "Kuifje"
     },
     {
-        question: "3. Welk Belgisch gerecht bestaat uit mosselen gekookt in witte wijn en geserveerd met friet?",
+        question: "Welk Belgisch gerecht bestaat uit mosselen gekookt in witte wijn en geserveerd met friet?",
         choices: [
             "Mosselen met friet",
             "Stoofvlees met friet",
@@ -30,7 +30,7 @@ var questions = [
         correctAnswer: "Mosselen met friet"
     },
     {
-        question: "4. Wat is de bijnaam van het beroemdste Belgische bier, dat ook wel 'het vloeibare brood' wordt genoemd?",
+        question: "Wat is de bijnaam van het beroemdste Belgische bier, dat ook wel 'het vloeibare brood' wordt genoemd?",
         choices: [
             "Leffe",
             "Chimay",
@@ -40,7 +40,7 @@ var questions = [
         correctAnswer: "Leffe"
     },
     {
-        question: "5. Welk bekend Belgisch stripfiguur woont in een molen en heeft een vriendin genaamd Suzie?",
+        question: "Welk bekend Belgisch stripfiguur woont in een molen en heeft een vriendin genaamd Suzie?",
         choices: [
             "Suske en Wiske",
             "Kuifje",
@@ -50,27 +50,27 @@ var questions = [
         correctAnswer: "Suske en Wiske"
     },
     {
-        question: "6. Wat is de meest voorkomende voornaam bij Belgische mannen?",
+        question: "Wat is de meest voorkomende voornaam bij Belgische mannen?",
         correctAnswer: "Jan"
     },
     {
-        question: "7. Wat is het favoriete onderwerp van discussie onder Belgen?",
+        question: "Wat is het favoriete onderwerp van discussie onder Belgen?",
         correctAnswer: "Het weer"
     },
     {
-        question: "8. Wat is de populairste Belgische sport na voetbal?",
+        question: "Wat is de populairste Belgische sport na voetbal?",
         correctAnswer: "Wielrennen"
     },
     {
-        question: "9. Wat is het favoriete gezelschapsspel van Belgen, gespeeld met kleine pionnen en dobbelstenen?",
+        question: "Wat is het favoriete gezelschapsspel van Belgen, gespeeld met kleine pionnen en dobbelstenen?",
         correctAnswer: "Monopoly"
     },
     {
-        question: "10. Wat is een typisch Belgische gewoonte tijdens het winkelen?",
+        question: "Wat is een typisch Belgische gewoonte tijdens het winkelen?",
         correctAnswer: "Veel handtassen dragen"
     },
     {
-        question: "11. Welk Belgisch stripfiguur staat bekend om zijn blauwe huid en witte muts?",
+        question: "Welk Belgisch stripfiguur staat bekend om zijn blauwe huid en witte muts?",
         choices: [
             "Kuifje",
             "Suske en Wiske",
@@ -80,7 +80,7 @@ var questions = [
         correctAnswer: "Smurfen"
     },
     {
-        question: "12. Wat is de bijnaam van het beroemde Belgische bier dat in een speciaal glas wordt geserveerd met een aangepaste schuimkraag?",
+        question: "Wat is de bijnaam van het beroemde Belgische bier dat in een speciaal glas wordt geserveerd met een aangepaste schuimkraag?",
         choices: [
             "Duvel",
             "Chimay",
@@ -90,7 +90,7 @@ var questions = [
         correctAnswer: "Duvel"
     },
     {
-        question: "13. Welke Belgische stad is wereldberoemd om zijn diamantindustrie?",
+        question: "Welke Belgische stad is wereldberoemd om zijn diamantindustrie?",
         choices: [
             "Antwerpen",
             "Brugge",
@@ -100,7 +100,7 @@ var questions = [
         correctAnswer: "Antwerpen"
     },
     {
-        question: "14. Welk Belgisch stripfiguur is een kleine jongen die avonturen beleeft met zijn vrienden Flip de papegaai en Filiberke?",
+        question: "Welk Belgisch stripfiguur is een kleine jongen die avonturen beleeft met zijn vrienden Flip de papegaai en Filiberke?",
         choices: [
             "Suske en Wiske",
             "Kuifje",
@@ -110,7 +110,7 @@ var questions = [
         correctAnswer: "Jommeke"
     },
     {
-        question: "15. Wat is de hoofdstad van België?",
+        question: "Wat is de hoofdstad van België?",
         choices: [
             "Brugge",
             "Gent",
@@ -120,23 +120,23 @@ var questions = [
         correctAnswer: "Brussel"
     },
     {
-        question: "16. Welke beroemde Belgische schilder wordt geassocieerd met het fauvisme en is bekend om zijn levendige kleurgebruik?",
+        question: "Welke beroemde Belgische schilder wordt geassocieerd met het fauvisme en is bekend om zijn levendige kleurgebruik?",
         correctAnswer: "René Magritte"
     },
     {
-        question: "17. Wat is het nationale gerecht van België, bestaande uit gestoofd rundvlees in bier, op smaak gebracht met kruiden?",
+        question: "Wat is het nationale gerecht van België, bestaande uit gestoofd rundvlees in bier, op smaak gebracht met kruiden?",
         correctAnswer: "Stoofvlees"
     },
     {
-        question: "18. Welke Belgische zangeres staat bekend om hits als 'If I Could Turn Back Time' en 'Believe'?",
+        question: "Welke Belgische zangeres staat bekend om hits als 'If I Could Turn Back Time' en 'Believe'?",
         correctAnswer: "Helmut Lotti"
     },
     {
-        question: "19. Welk Belgisch bier staat bekend als 'het bruine bier'?",
+        question: "Welk Belgisch bier staat bekend als 'het bruine bier'?",
         correctAnswer: "Leffe"
     },
     {
-        question: "20.Welke Belgische stad staat bekend om zijn middeleeuwse architectuur en jaarlijkse Gentse Feesten?",
+        question: "Welke Belgische stad staat bekend om zijn middeleeuwse architectuur en jaarlijkse Gentse Feesten?",
         correctAnswer: "Gent"
     }
 ];
@@ -293,6 +293,7 @@ function nextQuestionOrEndQuiz() {
     currentQuestion++;
     if (currentQuestion < totalQuestions) {
         displayQuestion();
+        displayQuestionNumber();
         document.getElementById("nextQuestion").style.display = "none";
         document.getElementById("feedback").textContent = "";
         document.getElementById("submitAnswer").style.display = "inline"; // Toon de knop voor het indienen van antwoorden
