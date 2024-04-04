@@ -1,27 +1,17 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url('../media/Belgium_backgorund.jpg'); /* Achtergrondafbeelding van de Belgische vlag */
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     color: white;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
-.background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../media/Belgium_backgorund.jpg");
-    border-image: fill 0 linear-gradient(#0003, #000);
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px);
-    z-index: -1;
-  }
 
+/* Lettertypen */
 @font-face {
     font-family: "myFont";
     src: url("../fonts/horseshoes_and_lemonade/Truculenta-VariableFont_opsz\,wdth\,wght.ttf") format("truetype");
@@ -31,82 +21,97 @@ body {
     src: url("../fonts/komyca/DonegalOne-Regular.ttf") format("truetype");
 }
 
+/* Hoofdsectie */
 main {
     padding: 20px;
 }
 
+/* Vraagvak */
 .question {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 50px; /* Increase the padding to make the box bigger */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparante zwarte achtergrond */
+    padding: 50px; /* Padding toegevoegd voor ruimte */
     border-radius: 40px;
     text-align: center;
-    
-    max-width: 600px; /* Add max-width for better responsiveness */
-    margin: 0 auto; /* Center the box horizontally */
+    max-width: 600px; /* Maximale breedte toegevoegd voor responsiviteit */
+    margin: 0 auto; /* Gecentreerd op de pagina */
 }
 
+/* Vraagtitel */
 .question h2 {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); /* Witte tekstkleur */
     font-size: 40px;
     font-family: myFont;
 }
 
+/* Feedbacktekst */
 .question p {
     font-size: 30px;
     font-family: myFont;
 }
 
+/* Formulier */
 form {
     margin-top: 10px;
 }
 
+/* Radio-knoppen */
 input[type="radio"] {
     margin-right: 0;
 }
 
-input[type="submit"] {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: myFont;
-    font-size: 25px;
-    margin: 20px;
-}
-
-/* Your existing CSS */
-
-.choices{
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-between; /* Evenly distribute choices */
-    margin-bottom: 10px;
-}
-
-.choice, .submitAnswer{
-    flex-basis: 48%; /* Adjust width to fit two choices in a row */
-    background-color: rgb(255, 145, 0);
-    border-radius: 20px;
-    font-size: 20px;
-    font-family: myFont2;
-    margin-top: 10px; /* Add margin to separate choices */
-}
-
-
-input[type="button"] {
-    background-color: rgb(255, 145, 0); /* Oranje achtergrondkleur */
+/* Knop voor antwoord indienen */
+input[type="submit"], input[type="button"] {
+    background-color: rgb(255, 120, 0); /* Rode achtergrondkleur */
     color: white; /* Witte tekstkleur */
-    padding: 10px 20px; /* Padding aanpassen */
+    padding: 10px 20px; /* Padding toegevoegd */
     border: none; /* Geen rand */
     border-radius: 5px; /* Afgeronde hoeken */
     cursor: pointer; /* Cursor veranderen naar pointer bij hover */
-    font-family: 'myFont2', sans-serif; /* Lettertype instellen */
-    font-size: 20px; /* Tekengrootte aanpassen */
-    margin-top: 10px; /* Bovenmarge toevoegen */
+    font-family: myFont; /* Lettertype instellen */
+    font-size: 25px; /* Tekengrootte aanpassen */
+    margin: 20px; /* Buitenmarge toegevoegd */
 }
 
-input[type="button"]:hover {
-    background-color: rgb(255, 120, 0); /* Donkerder oranje bij hover */
+/* Keuzelijst */
+.choices {
+    display: flex;
+    flex-wrap: wrap; /* Laat items naar de volgende regel gaan */
+    justify-content: space-between; /* Evenredig verdeelde keuzes */
+    margin-bottom: 10px;
+}
+
+/* Keuzevak */
+.choice, .submitAnswer {
+    flex-basis: 48%; /* Breedte aangepast om twee keuzes in een rij te passen */
+    background-color: rgb(255, 120, 0); /* Blauwe achtergrondkleur */
+    border-radius: 20px; /* Afgeronde hoeken */
+    font-size: 20px;
+    font-family: myFont2; /* Lettertype voor keuzes */
+    margin-top: 10px; /* Bovenmarge toegevoegd */
+}
+
+/* Hovers voor knoppen */
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: rgb(255, 0, 0); /* Donkerrode achtergrondkleur bij hover */
+}
+
+/* Aanvullende stijl voor open antwoordveld */
+#openAnswer {
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc; /* Randkleur */
+    border-radius: 5px; /* Afgeronde hoeken */
+    margin-top: 10px; /* Bovenmarge toegevoegd */
+    width: 100%; /* Volledige breedte */
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Achtergrondkleur */
+    color: #333; /* Tekstkleur */
+}
+
+/* Focusstijl voor open antwoordveld */
+#openAnswer:focus {
+    outline: none; /* Geen focus outline */
+    border-color: rgb(255, 120, 0); /* Randkleur bij focus */
+    box-shadow: 0 0 5px rgb(255, 120, 0); /* Schaduw bij focus */
 }

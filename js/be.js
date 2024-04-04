@@ -1,196 +1,238 @@
-const questions = [
+var questions = [
     {
-        questionNumber: 1,
-        question: "Wat is de hoofdstad van België?",
+        question: "Wat is de officiële naam van de Franse presidentiële residentie?",
         choices: [
-            "Brussel",
-            "Antwerpen",
-            "Gent",
-            "Luik"
+            "Het Élysée Kasteel",
+            "Het Louvre",
+            "Het Versailles Paleis",
+            "Het Pantheon"
         ],
-        correctAnswer: "Brussel"
+        correctAnswer: "Het Élysée Kasteel"
     },
     {
-        questionNumber: 2,
-        question: "Welke Belgische stad staat bekend om zijn chocolade?",
+        question: "Welke rivier stroomt door Parijs?",
         choices: [
-            "Brugge",
-            "Leuven",
-            "Antwerpen",
-            "Brussel"
+            "De Loire",
+            "De Seine",
+            "De Rhône",
+            "De Garonne"
         ],
-        correctAnswer: "Brugge"
+        correctAnswer: "De Seine"
     },
     {
-        questionNumber: 3,
-        question: "Welke Belgische stripfiguur is een bekende reporter?",
+        question: "Wie schreef de beroemde roman 'Les Misérables'?",
         choices: [
-            "Suske",
-            "Kuifje",
-            "Jommeke",
-            "Lucky Luke"
+            "Émile Zola",
+            "Gustave Flaubert",
+            "Victor Hugo",
+            "Albert Camus"
         ],
-        correctAnswer: "Kuifje"
+        correctAnswer: "Victor Hugo"
     },
     {
-        questionNumber: 4,
-        question: "In welke Belgische stad is het Atomium te vinden?",
+        question: "Wat is de hoogste berg in Frankrijk en in welk gebergte bevindt deze zich?",
         choices: [
-            "Antwerpen",
-            "Gent",
-            "Brussel",
-            "Luik"
+            "Mont Blanc, in de Pyreneeën",
+            "Mont Blanc, in de Vogezen",
+            "Mont Blanc, in de Alpen",
+            "Mont Ventoux, in de Jura"
         ],
-        correctAnswer: "Brussel"
+        correctAnswer: "Mont Blanc, in de Alpen"
     },
     {
-        questionNumber: 5,
-        question: "Welke Belgische zangeres staat bekend als de 'Queen of Pop'?",
+        question: "Wie staat bekend als 'de kleine mus' in de Franse muziekgeschiedenis?",
         choices: [
-            "Natalia",
-            "Helena",
-            "Laura",
-            "Axelle"
+            "Édith Piaf",
+            "Maurice Chevalier",
+            "Charles Aznavour",
+            "Jacques Brel"
         ],
-        correctAnswer: "Natalia"
+        correctAnswer: "Édith Piaf"
     },
     {
-        questionNumber: 6,
-        question: "Wie schreef 'De Leeuw van Vlaanderen'?",
-        choices: [
-            "Hendrik Conscience",
-            "Willem Elsschot",
-            "Stijn Streuvels",
-            "Hugo Claus"
-        ],
-        correctAnswer: "Hendrik Conscience"
+        question: "Wat is de beroemde Franse lekkernij die bestaat uit laagjes bladerdeeg, gevuld met banketbakkersroom en bedekt met een glazuur van karamel?",
+        correctAnswer: "Millefeuille"
     },
     {
-        questionNumber: 7,
-        question: "Welke Belgische stad staat bekend om zijn diamanten?",
-        choices: [
-            "Antwerpen",
-            "Brugge",
-            "Gent",
-            "Leuven"
-        ],
-        correctAnswer: "Antwerpen"
+        question: "Welke Franse stad staat bekend als de hoofdstad van de parfumindustrie?",
+        correctAnswer: "Grasse"
     },
     {
-        questionNumber: 8,
-        question: "Welke Belgische surrealistische schilder staat bekend om zijn 'Les Temps Perdu'?",
-        choices: [
-            "René Magritte",
-            "Paul Delvaux",
-            "James Ensor",
-            "Fernand Khnopff"
-        ],
-        correctAnswer: "René Magritte"
-    },
-    // Additional questions
-    {
-        questionNumber: 9,
-        question: "Wat is de bijnaam van de inwoners van Gent?",
-        choices: [
-            "Gentenaars",
-            "Antwerpenaren",
-            "Bruggelingen",
-            "Leuvenaars"
-        ],
-        correctAnswer: "Gentenaars"
+        question: "Wie was de beroemde Franse keizer die bekend staat om zijn militaire veroveringen en de introductie van het Napoleontische rechtssysteem?",
+        correctAnswer: "Napoleon Bonaparte"
     },
     {
-        questionNumber: 10,
-        question: "Welke Belgische stad is bekend om zijn jaarlijkse carnavalsstoet?",
-        choices: [
-            "Aalst",
-            "Mechelen",
-            "Kortrijk",
-            "Hasselt"
-        ],
-        correctAnswer: "Aalst"
+        question: "Wat is de traditionele Franse dans die vaak wordt geassocieerd met de Moulin Rouge en de Belle Époque?",
+        correctAnswer: "Can-Can"
+    },
+    {
+        question: "Wat is een bekend Frans gerecht dat bestaat uit slakken gekookt met knoflookboter en kruiden?",
+        correctAnswer: "Escargots"
     }
+
 ];
 
-let currentQuestionIndex = 0;
-let totalCorrect = 0;
-
+var totalQuestions = questions.length;
+var currentQuestion = 0;
+var totalCorrect = 0;
 function displayQuestion() {
-    const currentQuestion = questions[currentQuestionIndex];
-    const questionTextElement = document.getElementById('questionText');
-    if (questionTextElement) {
-        questionTextElement.textContent = "Vraag " + currentQuestion.questionNumber + ": " + currentQuestion.question;
-    } else {
-        console.error("Error: questionText element not found.");
-    }
+    var questionElement = document.getElementById("questionText");
+    var choicesElement = document.getElementsByClassName("choices")[0];
+    var openQuestionAnswer = document.getElementById("openQuestionAnswer");
+
+    // Toon de huidige vraag
+    questionElement.textContent = questions[currentQuestion].question;
     
-    const choiceLabels = document.querySelectorAll('.choice label');
-    choiceLabels.forEach((label, index) => {
-        label.textContent = currentQuestion.choices[index];
-    });
+    // Verwijder alle vorige keuzes en open vraag inputveld
+    choicesElement.innerHTML = "";
+    openQuestionAnswer.style.display = "none";
 
-    const choiceInputs = document.querySelectorAll('input[type="radio"]');
-    choiceInputs.forEach((input, index) => {
-        input.value = currentQuestion.choices[index].toLowerCase();
-    });
-
-    const submitAnswerButton = document.getElementById('submitAnswer');
-    submitAnswerButton.addEventListener('click', submitAnswerFunction);
+    // Voeg keuzes toe aan de DOM voor gesloten vragen
+    if (questions[currentQuestion].choices) {
+        questions[currentQuestion].choices.forEach(function(choice, index) {
+            var choiceElement = document.createElement("div");
+            choiceElement.className = "choice";
+            
+            var inputElement = document.createElement("input");
+            inputElement.type = "radio";
+            inputElement.id = "option_" + index;
+            inputElement.name = "capital";
+            inputElement.value = choice;
+            
+            var labelElement = document.createElement("label");
+            labelElement.htmlFor = "option_" + index;
+            labelElement.textContent = choice;
+            
+            choiceElement.appendChild(inputElement);
+            choiceElement.appendChild(labelElement);
+            choicesElement.appendChild(choiceElement);
+        });
+    } else { // Voeg inputveld toe voor open vraag
+        openQuestionAnswer.style.display = "block";
+    }
+}
+// Functie om het huidige vraagnummer weer te geven
+function displayQuestionNumber() {
+    var questionNumberElement = document.getElementById("questionNumber");
+    questionNumberElement.textContent = "Vraag " + (currentQuestion + 1) + " van " + totalQuestions;
 }
 
-const submitAnswerFunction = () => {
-    const selectedAnswer = document.querySelector('input[name="capital"]:checked');
-    
-    if(selectedAnswer) {
-        if(selectedAnswer.value.toLowerCase() === questions[currentQuestionIndex].correctAnswer.toLowerCase()) {
-            selectedAnswer.parentElement.style.backgroundColor = "green";
+// Roep de functie aan om het huidige vraagnummer weer te geven bij het starten van de quiz
+displayQuestionNumber();
+
+
+function checkAnswer() {
+    var selectedOption = document.querySelector('input[name="capital"]:checked');
+    var openAnswer = document.getElementById("openAnswer");
+    var feedbackElement = document.getElementById("feedback");
+    var choices = document.querySelectorAll('.choice');
+    var nextQuestionButton = document.getElementById("nextQuestion");
+
+    if (selectedOption) { // Als het een gesloten vraag is
+        var selectedValue = selectedOption.value;
+        var correctAnswer = questions[currentQuestion].correctAnswer;
+
+        if (selectedValue === correctAnswer) {
+            feedbackElement.textContent = "Goed! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "green";
+
+            // Verander de achtergrondkleur van de geselecteerde knop naar groen
+            selectedOption.parentElement.style.backgroundColor = "green";
             totalCorrect++;
         } else {
-            selectedAnswer.parentElement.style.backgroundColor = "red";
-            document.querySelector('input[value="' + questions[currentQuestionIndex].correctAnswer.toLowerCase() + '"]').parentElement.style.backgroundColor = "green";
+            feedbackElement.textContent = "Fout! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "red";
+
+            // Verander de achtergrondkleur van de geselecteerde knop naar rood
+            selectedOption.parentElement.style.backgroundColor = "red";
+
+            // Zoek de knop met het juiste antwoord en verander de achtergrondkleur naar groen
+            choices.forEach(function(choice) {
+                if (choice.textContent.includes(correctAnswer)) {
+                    choice.style.backgroundColor = "green";
+                }
+            });
         }
-        
-        const choices = document.querySelectorAll('.choice input[type="radio"]');
-        choices.forEach((choice) => {
-            choice.disabled = true;
+    } else { // Als het een open vraag is
+        var userAnswer = openAnswer.value.trim();
+        var correctAnswer = questions[currentQuestion].correctAnswer.toLowerCase();
+
+        if (userAnswer.toLowerCase() === correctAnswer) {
+            feedbackElement.textContent = "Goed! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "green";
+            totalCorrect++;
+        } else {
+            feedbackElement.textContent = "Fout! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "red";
+        }
+
+        // Zoek het antwoord en verander de achtergrondkleur van de knop naar groen
+        choices.forEach(function(choice) {
+            if (choice.textContent.includes(correctAnswer)) {
+                choice.style.backgroundColor = "green";
+            }
         });
-        
-        const submitAnswerButton = document.getElementById('submitAnswer');
-        submitAnswerButton.style.display = "none";
-        
-        document.getElementById('nextQuestion').style.display = "block";
-    } else {
-        alert("Kies een antwoord");
     }
+
+    // Verberg de submit button en toon de knop voor de volgende vraag
+    document.getElementById("submitAnswer").style.display = "none";
+    nextQuestionButton.style.display = "inline";
+
+    // Verberg het inputveld voor open vragen
+    openAnswer.style.display = "none";
+
+    // Reset de waarde van het inputveld voor open vragen
+    openAnswer.value = '';
 }
 
-document.getElementById('nextQuestion').addEventListener('click', () => {
-    currentQuestionIndex++;
-    
-    if(currentQuestionIndex < questions.length) {
-        displayQuestion();
-        
-        const radioButtons = document.querySelectorAll('.choice input[type="radio"]');
-        radioButtons.forEach((radioButton) => {
-            radioButton.checked = false;
-            radioButton.disabled = false;
-        });
-        
-        const choices = document.querySelectorAll('.choice');
-        choices.forEach((choice) => {
-            choice.style.backgroundColor = "";
-        });
-        
-        document.getElementById('nextQuestion').style.display = "none";
-        document.getElementById('submitAnswer').style.display = "block";
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", function() {
+    var openAnswer = document.getElementById("openAnswer");
+    var nextQuestionButton = document.getElementById("nextQuestion");
+
+    // Toon het inputveld voor open vragen
+    openAnswer.style.display = "block";
+
+    // Verberg de knop voor de volgende vraag
+    nextQuestionButton.style.display = "none";
+});
+
+// Eventlistener voor het controleren van antwoorden
+document.getElementById("submitAnswer").addEventListener("click", function() {
+    if (document.querySelector('input[name="capital"]:checked') || document.getElementById("openAnswer").value.trim() !== '') {
+        checkAnswer();
     } else {
-        window.location.href = "end.html?quiz=be&score=" + totalCorrect;
+        alert("Kies een optie of vul een antwoord in voor open vragen.");
     }
 });
 
-function updateScore(score) {
-    const scoreElement = document.getElementById("score");
-    scoreElement.textContent = score + " van de 10 vragen correct beantwoord";
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", nextQuestionOrEndQuiz);
+
+
+
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", nextQuestionOrEndQuiz);
+
+
+// Functie om naar de volgende vraag te gaan of de quiz te beëindigen
+function nextQuestionOrEndQuiz() {
+    currentQuestion++;
+    if (currentQuestion < totalQuestions) {
+        displayQuestion();
+        document.getElementById("nextQuestion").style.display = "none";
+        document.getElementById("feedback").textContent = "";
+        document.getElementById("submitAnswer").style.display = "inline"; // Toon de knop voor het indienen van antwoorden
+    } else {
+        // Beëindig de quiz en ga naar de eindpagina
+        window.location.href = "end.html?quiz=be&score=" + totalCorrect;
+    }
 }
 
+
+
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", nextQuestionOrEndQuiz);
+
+// Start de quiz door de eerste vraag weer te geven
 displayQuestion();
