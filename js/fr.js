@@ -49,47 +49,6 @@ var questions = [
         ],
         correctAnswer: "Édith Piaf"
     },
-
-    {
-        question: "Wat is de beroemde Franse lekkernij die bestaat uit laagjes bladerdeeg, gevuld met banketbakkersroom en bedekt met een glazuur van karamel?",
-        choices: [
-            "Croissant",
-            "Éclair",
-            "Macaron",
-            "Millefeuille"
-        ],
-        correctAnswer: "Millefeuille"
-    },
-    {
-        question: "Welke Franse stad staat bekend als de hoofdstad van de parfumindustrie?",
-        choices: [
-            "Nice",
-            "Marseille",
-            "Cannes",
-            "Grasse"
-        ],
-        correctAnswer: "Grasse"
-    },
-    {
-        question: "Wie was de beroemde Franse keizer die bekend staat om zijn militaire veroveringen en de introductie van het Napoleontische rechtssysteem?",
-        choices: [
-            "Napoleon Bonaparte",
-            "Louis XIV",
-            "Charlemagne",
-            "François Hollande"
-        ],
-        correctAnswer: "Napoleon Bonaparte"
-    },
-    {
-        question: "Wat is de traditionele Franse dans die vaak wordt geassocieerd met de Moulin Rouge en de Belle Époque?",
-        choices: [
-            "Ballet",
-            "Can-Can",
-            "Tango",
-            "Wals"
-        ],
-        correctAnswer: "Can-Can"
-    },
     {
         question: "Wat is de beroemde Franse lekkernij die bestaat uit laagjes bladerdeeg, gevuld met banketbakkersroom en bedekt met een glazuur van karamel?",
         correctAnswer: "Millefeuille"
@@ -113,114 +72,158 @@ var questions = [
 
 ];
 
-// Set initial question index
-// Set initial question index
-var currentQuestionIndex = 0;
-
+var totalQuestions = questions.length;
+var currentQuestion = 0;
 var totalCorrect = 0;
-
-// Function to display the current question and choices
 function displayQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];
-    var questionTextElement = document.getElementById('questionText');
-    if (questionTextElement) {
-        questionTextElement.textContent = currentQuestion.question;
-    } else {
-        console.error("ERROR: Element niet gevonden.");
-    }
+    var questionElement = document.getElementById("questionText");
+    var choicesElement = document.getElementsByClassName("choices")[0];
+    var openQuestionAnswer = document.getElementById("openQuestionAnswer");
+
+    // Toon de huidige vraag
+    questionElement.textContent = questions[currentQuestion].question;
     
-    var choiceLabels = document.querySelectorAll('.choice label');
-    choiceLabels.forEach(function(label, index) {
-        label.textContent = currentQuestion.choices[index];
-    });
+    // Verwijder alle vorige keuzes en open vraag inputveld
+    choicesElement.innerHTML = "";
+    openQuestionAnswer.style.display = "none";
 
-    var choiceInputs = document.querySelectorAll('input[type="radio"]');
-    console.log(choiceInputs)
-    choiceInputs.forEach((input, index) => {
-        input.value = currentQuestion.choices[index].toLowerCase();
-    });
-
-    // Define submitAnswerButton within the scope of this function
-    var submitAnswerButton = document.getElementById('submitAnswer');
-    // Attach event listener for 'Submit Answer' button
-    submitAnswerButton.addEventListener('click', submitAnswerFunction);
+    // Voeg keuzes toe aan de DOM voor gesloten vragen
+    if (questions[currentQuestion].choices) {
+        questions[currentQuestion].choices.forEach(function(choice, index) {
+            var choiceElement = document.createElement("div");
+            choiceElement.className = "choice";
+            
+            var inputElement = document.createElement("input");
+            inputElement.type = "radio";
+            inputElement.id = "option_" + index;
+            inputElement.name = "capital";
+            inputElement.value = choice;
+            
+            var labelElement = document.createElement("label");
+            labelElement.htmlFor = "option_" + index;
+            labelElement.textContent = choice;
+            
+            choiceElement.appendChild(inputElement);
+            choiceElement.appendChild(labelElement);
+            choicesElement.appendChild(choiceElement);
+        });
+    } else { // Voeg inputveld toe voor open vraag
+        openQuestionAnswer.style.display = "block";
+    }
 }
 
+function checkAnswer() {
+    var selectedOption = document.querySelector('input[name="capital"]:checked');
+    var openAnswer = document.getElementById("openAnswer");
+    var feedbackElement = document.getElementById("feedback");
+    var choices = document.querySelectorAll('.choice');
+    var nextQuestionButton = document.getElementById("nextQuestion");
 
-const submitAnswerFunction = () => {
-    // Get the selected answer
-    var selectedAnswer = document.querySelector('input[name="capital"]:checked');
-    
-    // Check if an answer is selected
-    if(selectedAnswer) {
-        // Check if the selected answer is correct
-        if(selectedAnswer.value.toLowerCase() === questions[currentQuestionIndex].correctAnswer.toLowerCase()) {
-            // Apply green background to the correct choice
-            selectedAnswer.parentElement.style.backgroundColor = "green";
-            // Increase total correct count
+    if (selectedOption) { // Als het een gesloten vraag is
+        var selectedValue = selectedOption.value;
+        var correctAnswer = questions[currentQuestion].correctAnswer;
+
+        if (selectedValue === correctAnswer) {
+            feedbackElement.textContent = "Goed! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "green";
+
+            // Verander de achtergrondkleur van de geselecteerde knop naar groen
+            selectedOption.parentElement.style.backgroundColor = "green";
             totalCorrect++;
         } else {
-            // Apply red background to the incorrect choice
-            selectedAnswer.parentElement.style.backgroundColor = "red";
-            // Apply green background to the correct choice
-            document.querySelector('input[value="' + questions[currentQuestionIndex].correctAnswer.toLowerCase() + '"]').parentElement.style.backgroundColor = "green";
+            feedbackElement.textContent = "Fout! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "red";
+
+            // Verander de achtergrondkleur van de geselecteerde knop naar rood
+            selectedOption.parentElement.style.backgroundColor = "red";
+
+            // Zoek de knop met het juiste antwoord en verander de achtergrondkleur naar groen
+            choices.forEach(function(choice) {
+                if (choice.textContent.includes(correctAnswer)) {
+                    choice.style.backgroundColor = "green";
+                }
+            });
         }
-        
-        // Disable all radio buttons
-        var choices = document.querySelectorAll('.choice input[type="radio"]');
+    } else { // Als het een open vraag is
+        var userAnswer = openAnswer.value.trim();
+        var correctAnswer = questions[currentQuestion].correctAnswer.toLowerCase();
+
+        if (userAnswer.toLowerCase() === correctAnswer) {
+            feedbackElement.textContent = "Goed! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "green";
+            totalCorrect++;
+        } else {
+            feedbackElement.textContent = "Fout! Het juiste antwoord is: " + correctAnswer;
+            feedbackElement.style.color = "red";
+        }
+
+        // Zoek het antwoord en verander de achtergrondkleur van de knop naar groen
         choices.forEach(function(choice) {
-            choice.disabled = true;
+            if (choice.textContent.includes(correctAnswer)) {
+                choice.style.backgroundColor = "green";
+            }
         });
-        
-        // Hide the 'Submit Answer' button
-        var submitAnswerButton = document.getElementById('submitAnswer');
-        submitAnswerButton.style.display = "none";
-        
-        // Show the 'Next Question' button
-        document.getElementById('nextQuestion').style.display = "block";
-    } else {
-        alert("Selecteer graag een antwoord..");
     }
+
+    // Verberg de submit button en toon de knop voor de volgende vraag
+    document.getElementById("submitAnswer").style.display = "none";
+    nextQuestionButton.style.display = "inline";
+
+    // Verberg het inputveld voor open vragen
+    openAnswer.style.display = "none";
+
+    // Reset de waarde van het inputveld voor open vragen
+    openAnswer.value = '';
 }
 
-// Function to proceed to the next question
-document.getElementById('nextQuestion').addEventListener('click', function() {
-    // Increment the question index
-    currentQuestionIndex++;
-    
-    // Check if there are more questions
-    if(currentQuestionIndex < questions.length) {
-        // Display the next question
-        displayQuestion();
-        
-        // Reset radio buttons and enable them for the next question
-        var radioButtons = document.querySelectorAll('.choice input[type="radio"]');
-        radioButtons.forEach(function(radioButton) {
-            radioButton.checked = false;
-            radioButton.disabled = false;
-        });
-        
-        // Reset background color for all choices
-        var choices = document.querySelectorAll('.choice');
-        choices.forEach(function(choice) {
-            choice.style.backgroundColor = "";
-        });
-        
-        // Hide the 'Next Question' button
-        document.getElementById('nextQuestion').style.display = "none";
-        
-        // Show the 'Submit Answer' button
-        document.getElementById('submitAnswer').style.display = "block";
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", function() {
+    var openAnswer = document.getElementById("openAnswer");
+    var nextQuestionButton = document.getElementById("nextQuestion");
+
+    // Toon het inputveld voor open vragen
+    openAnswer.style.display = "block";
+
+    // Verberg de knop voor de volgende vraag
+    nextQuestionButton.style.display = "none";
+});
+
+// Eventlistener voor het controleren van antwoorden
+document.getElementById("submitAnswer").addEventListener("click", function() {
+    if (document.querySelector('input[name="capital"]:checked') || document.getElementById("openAnswer").value.trim() !== '') {
+        checkAnswer();
     } else {
-        window.location.href = "end.html?quiz=fr&score=" + totalCorrect; // Pass the score as a query parameter
+        alert("Kies een optie of vul een antwoord in voor open vragen.");
     }
 });
 
-function updateScore(score) {
-    var scoreElement = document.getElementById("score");
-    scoreElement.textContent = score + " van de 5 vragen correct beantwoord";
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", nextQuestionOrEndQuiz);
+
+
+
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", nextQuestionOrEndQuiz);
+
+
+// Functie om naar de volgende vraag te gaan of de quiz te beëindigen
+function nextQuestionOrEndQuiz() {
+    currentQuestion++;
+    if (currentQuestion < totalQuestions) {
+        displayQuestion();
+        document.getElementById("nextQuestion").style.display = "none";
+        document.getElementById("feedback").textContent = "";
+        document.getElementById("submitAnswer").style.display = "inline"; // Toon de knop voor het indienen van antwoorden
+    } else {
+        // Beëindig de quiz en ga naar de eindpagina
+        window.location.href = "end.html?quiz=fr&score=" + totalCorrect;
+    }
 }
 
-// Display the first question initially
-displayQuestion();
 
+
+// Eventlistener voor doorgaan naar de volgende vraag
+document.getElementById("nextQuestion").addEventListener("click", nextQuestionOrEndQuiz);
+
+// Start de quiz door de eerste vraag weer te geven
+displayQuestion();

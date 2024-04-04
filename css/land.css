@@ -98,3 +98,23 @@ input[type="button"] {
 input[type="button"]:hover {
     background-color: rgb(0, 94, 255); /* Donkerder oranje bij hover */
 }
+
+#openAnswer {
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Background color */
+    color: #333; /* Text color */
+}
+
+/* Added for focus style */
+#openAnswer:focus {
+    outline: none;
+    border-color: dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
