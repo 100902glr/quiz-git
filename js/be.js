@@ -1,76 +1,149 @@
 var questions = [
     {
-        question: "Wat is de officiële naam van de Franse presidentiële residentie?",
+        question: "1. Wat is het favoriete snackgerecht van Belgen, bestaande uit frietjes met mayonaise?",
         choices: [
-            "Het Élysée Kasteel",
-            "Het Louvre",
-            "Het Versailles Paleis",
-            "Het Pantheon"
+            "Mosselen met friet",
+            "Stoofvlees met friet",
+            "Balletjes in tomatensaus met friet",
+            "Frikandel speciaal"
         ],
-        correctAnswer: "Het Élysée Kasteel"
+        correctAnswer: "Stoofvlees met friet"
     },
     {
-        question: "Welke rivier stroomt door Parijs?",
+        question: "2. Welk beroemd Belgisch stripfiguur heeft een hond genaamd Bobbie en woont in een molen?",
         choices: [
-            "De Loire",
-            "De Seine",
-            "De Rhône",
-            "De Garonne"
+            "Suske en Wiske",
+            "Kuifje",
+            "Jommeke",
+            "Nero"
         ],
-        correctAnswer: "De Seine"
+        correctAnswer: "Kuifje"
     },
     {
-        question: "Wie schreef de beroemde roman 'Les Misérables'?",
+        question: "3. Welk Belgisch gerecht bestaat uit mosselen gekookt in witte wijn en geserveerd met friet?",
         choices: [
-            "Émile Zola",
-            "Gustave Flaubert",
-            "Victor Hugo",
-            "Albert Camus"
+            "Mosselen met friet",
+            "Stoofvlees met friet",
+            "Kip met friet",
+            "Garnaalkroketten"
         ],
-        correctAnswer: "Victor Hugo"
+        correctAnswer: "Mosselen met friet"
     },
     {
-        question: "Wat is de hoogste berg in Frankrijk en in welk gebergte bevindt deze zich?",
+        question: "4. Wat is de bijnaam van het beroemdste Belgische bier, dat ook wel 'het vloeibare brood' wordt genoemd?",
         choices: [
-            "Mont Blanc, in de Pyreneeën",
-            "Mont Blanc, in de Vogezen",
-            "Mont Blanc, in de Alpen",
-            "Mont Ventoux, in de Jura"
+            "Leffe",
+            "Chimay",
+            "Duvel",
+            "Westvleteren 12"
         ],
-        correctAnswer: "Mont Blanc, in de Alpen"
+        correctAnswer: "Leffe"
     },
     {
-        question: "Wie staat bekend als 'de kleine mus' in de Franse muziekgeschiedenis?",
+        question: "5. Welk bekend Belgisch stripfiguur woont in een molen en heeft een vriendin genaamd Suzie?",
         choices: [
-            "Édith Piaf",
-            "Maurice Chevalier",
-            "Charles Aznavour",
-            "Jacques Brel"
+            "Suske en Wiske",
+            "Kuifje",
+            "Jommeke",
+            "Nero"
         ],
-        correctAnswer: "Édith Piaf"
+        correctAnswer: "Suske en Wiske"
     },
     {
-        question: "Wat is de beroemde Franse lekkernij die bestaat uit laagjes bladerdeeg, gevuld met banketbakkersroom en bedekt met een glazuur van karamel?",
-        correctAnswer: "Millefeuille"
+        question: "6. Wat is de meest voorkomende voornaam bij Belgische mannen?",
+        correctAnswer: "Jan"
     },
     {
-        question: "Welke Franse stad staat bekend als de hoofdstad van de parfumindustrie?",
-        correctAnswer: "Grasse"
+        question: "7. Wat is het favoriete onderwerp van discussie onder Belgen?",
+        correctAnswer: "Het weer"
     },
     {
-        question: "Wie was de beroemde Franse keizer die bekend staat om zijn militaire veroveringen en de introductie van het Napoleontische rechtssysteem?",
-        correctAnswer: "Napoleon Bonaparte"
+        question: "8. Wat is de populairste Belgische sport na voetbal?",
+        correctAnswer: "Wielrennen"
     },
     {
-        question: "Wat is de traditionele Franse dans die vaak wordt geassocieerd met de Moulin Rouge en de Belle Époque?",
-        correctAnswer: "Can-Can"
+        question: "9. Wat is het favoriete gezelschapsspel van Belgen, gespeeld met kleine pionnen en dobbelstenen?",
+        correctAnswer: "Monopoly"
     },
     {
-        question: "Wat is een bekend Frans gerecht dat bestaat uit slakken gekookt met knoflookboter en kruiden?",
-        correctAnswer: "Escargots"
+        question: "10. Wat is een typisch Belgische gewoonte tijdens het winkelen?",
+        correctAnswer: "Veel handtassen dragen"
+    },
+    {
+        question: "11. Welk Belgisch stripfiguur staat bekend om zijn blauwe huid en witte muts?",
+        choices: [
+            "Kuifje",
+            "Suske en Wiske",
+            "Smurfen",
+            "Jommeke"
+        ],
+        correctAnswer: "Smurfen"
+    },
+    {
+        question: "12. Wat is de bijnaam van het beroemde Belgische bier dat in een speciaal glas wordt geserveerd met een aangepaste schuimkraag?",
+        choices: [
+            "Duvel",
+            "Chimay",
+            "Leffe",
+            "Westvleteren 12"
+        ],
+        correctAnswer: "Duvel"
+    },
+    {
+        question: "13. Welke Belgische stad is wereldberoemd om zijn diamantindustrie?",
+        choices: [
+            "Antwerpen",
+            "Brugge",
+            "Gent",
+            "Luik"
+        ],
+        correctAnswer: "Antwerpen"
+    },
+    {
+        question: "14. Welk Belgisch stripfiguur is een kleine jongen die avonturen beleeft met zijn vrienden Flip de papegaai en Filiberke?",
+        choices: [
+            "Suske en Wiske",
+            "Kuifje",
+            "Jommeke",
+            "Nero"
+        ],
+        correctAnswer: "Jommeke"
+    },
+    {
+        question: "15. Wat is de hoofdstad van België?",
+        choices: [
+            "Brugge",
+            "Gent",
+            "Brussel",
+            "Antwerpen"
+        ],
+        correctAnswer: "Brussel"
+    },
+    {
+        question: "16. Welke beroemde Belgische schilder wordt geassocieerd met het fauvisme en is bekend om zijn levendige kleurgebruik?",
+        correctAnswer: "René Magritte"
+    },
+    {
+        question: "17. Wat is het nationale gerecht van België, bestaande uit gestoofd rundvlees in bier, op smaak gebracht met kruiden?",
+        correctAnswer: "Stoofvlees"
+    },
+    {
+        question: "18. Welke Belgische zangeres staat bekend om hits als 'If I Could Turn Back Time' en 'Believe'?",
+        correctAnswer: "Helmut Lotti"
+    },
+    {
+        question: "19. Welk Belgisch bier staat bekend als 'het bruine bier'?",
+        correctAnswer: "Leffe"
+    },
+    {
+        question: "20.Welke Belgische stad staat bekend om zijn middeleeuwse architectuur en jaarlijkse Gentse Feesten?",
+        correctAnswer: "Gent"
     }
-
 ];
+
+
+
+
 
 var totalQuestions = questions.length;
 var currentQuestion = 0;
@@ -82,27 +155,27 @@ function displayQuestion() {
 
     // Toon de huidige vraag
     questionElement.textContent = questions[currentQuestion].question;
-    
+
     // Verwijder alle vorige keuzes en open vraag inputveld
     choicesElement.innerHTML = "";
     openQuestionAnswer.style.display = "none";
 
     // Voeg keuzes toe aan de DOM voor gesloten vragen
     if (questions[currentQuestion].choices) {
-        questions[currentQuestion].choices.forEach(function(choice, index) {
+        questions[currentQuestion].choices.forEach(function (choice, index) {
             var choiceElement = document.createElement("div");
             choiceElement.className = "choice";
-            
+
             var inputElement = document.createElement("input");
             inputElement.type = "radio";
             inputElement.id = "option_" + index;
             inputElement.name = "capital";
             inputElement.value = choice;
-            
+
             var labelElement = document.createElement("label");
             labelElement.htmlFor = "option_" + index;
             labelElement.textContent = choice;
-            
+
             choiceElement.appendChild(inputElement);
             choiceElement.appendChild(labelElement);
             choicesElement.appendChild(choiceElement);
@@ -114,7 +187,7 @@ function displayQuestion() {
 // Functie om het huidige vraagnummer weer te geven
 function displayQuestionNumber() {
     var questionNumberElement = document.getElementById("questionNumber");
-    questionNumberElement.textContent = "Vraag " + (currentQuestion + 1) + " van " + totalQuestions;
+    questionNumberElement.textContent = "vraag " + (currentQuestion + 1) + " van " + totalQuestions;
 }
 
 // Roep de functie aan om het huidige vraagnummer weer te geven bij het starten van de quiz
@@ -147,7 +220,7 @@ function checkAnswer() {
             selectedOption.parentElement.style.backgroundColor = "red";
 
             // Zoek de knop met het juiste antwoord en verander de achtergrondkleur naar groen
-            choices.forEach(function(choice) {
+            choices.forEach(function (choice) {
                 if (choice.textContent.includes(correctAnswer)) {
                     choice.style.backgroundColor = "green";
                 }
@@ -167,7 +240,7 @@ function checkAnswer() {
         }
 
         // Zoek het antwoord en verander de achtergrondkleur van de knop naar groen
-        choices.forEach(function(choice) {
+        choices.forEach(function (choice) {
             if (choice.textContent.includes(correctAnswer)) {
                 choice.style.backgroundColor = "green";
             }
@@ -186,7 +259,7 @@ function checkAnswer() {
 }
 
 // Eventlistener voor doorgaan naar de volgende vraag
-document.getElementById("nextQuestion").addEventListener("click", function() {
+document.getElementById("nextQuestion").addEventListener("click", function () {
     var openAnswer = document.getElementById("openAnswer");
     var nextQuestionButton = document.getElementById("nextQuestion");
 
@@ -198,7 +271,7 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
 });
 
 // Eventlistener voor het controleren van antwoorden
-document.getElementById("submitAnswer").addEventListener("click", function() {
+document.getElementById("submitAnswer").addEventListener("click", function () {
     if (document.querySelector('input[name="capital"]:checked') || document.getElementById("openAnswer").value.trim() !== '') {
         checkAnswer();
     } else {
@@ -236,3 +309,5 @@ document.getElementById("nextQuestion").addEventListener("click", nextQuestionOr
 
 // Start de quiz door de eerste vraag weer te geven
 displayQuestion();
+displayQuestionNumber(); // Call displayQuestionNumber() at the start of the quiz
+
