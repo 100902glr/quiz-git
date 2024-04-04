@@ -45,6 +45,7 @@ main {
     color: rgb(255, 255, 255);
     font-size: 40px;
     font-family: myFont;
+    letter-spacing: 2px;
 }
 
 .question p {
