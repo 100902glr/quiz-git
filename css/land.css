@@ -48,7 +48,7 @@ form {
     margin-top: 10px;
 }
 
-input[type="radio"] {
+input[type="button"] {
     margin-right: 0;
 }
 
@@ -71,10 +71,27 @@ input[type="submit"] {
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Evenly distribute choices */
     margin-bottom: 10px;
+    outline: none;
+
+    
+}
+.choiceButton.clicked {
+    /* Donkerder maken van de achtergrondkleur */
+    background-color: rgb(0, 94, 255);
 }
 
+
+.choiceButton {
+    /* Voeg de gewenste achtergrondkleur toe */
+    background-color: rgb(0, 94, 255);
+    /* Voeg een overgang toe voor een soepele animatie */
+    transition: background-color 0.3s ease;
+}
+
+/* Voeg een hover effect toe */
+
 .choice, .submitAnswer{
-    flex-basis: 48%; /* Adjust width to fit two choices in a row */
+    flex-basis: 49%; /* Adjust width to fit two choices in a row */
     background-color: rgb(0, 140, 255);
     border-radius: 20px;
     font-size: 20px;
@@ -89,6 +106,7 @@ input[type="button"] {
     padding: 10px 20px; /* Padding aanpassen */
     border: none; /* Geen rand */
     border-radius: 5px; /* Afgeronde hoeken */
+    outline: none;
     cursor: pointer; /* Cursor veranderen naar pointer bij hover */
     font-family: 'myFont2', sans-serif; /* Lettertype instellen */
     font-size: 20px; /* Tekengrootte aanpassen */
@@ -97,7 +115,11 @@ input[type="button"] {
 
 input[type="button"]:hover {
     background-color: rgb(0, 94, 255); /* Donkerder oranje bij hover */
+    filter: brightness(90%);
+
 }
+
+
 
 #openAnswer {
     padding: 10px;
