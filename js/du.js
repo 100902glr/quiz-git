@@ -1,7 +1,7 @@
 // Define an array of questions and their corresponding correct answers
 var questions = [
     {
-        question: "How many cities and towns are in Germany?",
+        question: "Hoeveel steden en dorpen zijn er in Duitsland?",
         choices: [
             "80000",
             "16000",
@@ -11,17 +11,17 @@ var questions = [
         correctAnswer: "80000"
     },
     {
-        question: "Which river flows through Berlin, the capital of Germany?",
+        question: "Welke rivier stroomt door Berlijn, de hoofdstad van Duitsland?",
         choices: [
-            "Rhine",
+            "Rijn",
             "Elbe",
-            "Danube",
+            "Donau",
             "Spree"
         ],
         correctAnswer: "Spree"
     },
     {
-        question: "Who was the first Chancellor of West Germany after World War II?",
+        question: "Wie was de eerste bondskanselier van West-Duitsland na de Tweede Wereldoorlog?",
         choices: [
             "Angela Merkel",
             "Konrad Adenauer",
@@ -31,7 +31,7 @@ var questions = [
         correctAnswer: "Konrad Adenauer"
     },
     {
-        question: "What is the name of the German currency before the adoption of the euro?",
+        question: "Wat is de naam van de Duitse munteenheid vóór de invoering van de euro?",
         choices: [
             "Markka",
             "Franc",
@@ -41,29 +41,27 @@ var questions = [
         correctAnswer: "Deutsche Mark"
     },
     {
-        question: "Which German city is famous for its annual Oktoberfest celebration??",
+        question: "Welke Duitse stad staat bekend om haar jaarlijkse Oktoberfest viering?",
         choices: [
-            "Cologne",
+            "Keulen",
             "Stuttgart",
-            "Munich",
+            "München",
             "Hamburg"
         ],
-        correctAnswer: "Munich"
+        correctAnswer: "München"
     },
     {
-        question: "What is the highest mountain in Germany?",
+        question: "Wat is de hoogste berg in Duitsland?",
         choices: [
             "Mont Blanc",
-            " Zugspitze ",
+            "Zugspitze",
             "Matterhorn",
-            "Mount Everest",
-
-            
+            "Mount Everest"
         ],
-        correctAnswer: " Zugspitze "
+        correctAnswer: "Zugspitze"
     },
     {
-        question: "Which car manufacturer is headquartered in Wolfsburg, Germany??",
+        question: "Welke autofabrikant heeft zijn hoofdkantoor in Wolfsburg, Duitsland?",
         choices: [
             "Ford",
             "BMW",
@@ -73,37 +71,35 @@ var questions = [
         correctAnswer: "Volkswagen"
     },
     {
-        question: "Which famous fairy tale duo originated from Germany?",
+        question: "Welk beroemd sprookjesduo komt oorspronkelijk uit Duitsland?",
         choices: [
-            "Cinderella and Prince Charming",
-            "Hansel and Gretel ",
-            " Romeo and Juliet",
-            "LiBeauty and the Beast"
+            "Assepoester en Prins Charmant",
+            "Hans en Grietje",
+            "Romeo en Julia",
+            "Belle en het Beest"
         ],
-        correctAnswer: "Hansel and Gretel "
+        correctAnswer: "Hans en Grietje"
     },
     {
-        question: " Which colors are in the German flag",
+        question: "Welke kleuren zitten er in de Duitse vlag?",
         choices: [
-            "Red, white, and blue",
-            "Green, white, and red",
-            "Black, red, and gold ",
-            " Yellow, black, and red"
+            "Rood, wit en blauw",
+            "Groen, wit en rood",
+            "Zwart, rood en goud",
+            "Geel, zwart en rood"
         ],
-        correctAnswer: "Black, red, and gold "
-    }
-    ,
+        correctAnswer: "Zwart, rood en goud"
+    },
     {
-        question: "In which year was the Berlin Wall demolished?",
+        question: "In welk jaar werd de Berlijnse Muur afgebroken?",
         choices: [
-            "1985 ",
+            "1985",
             "1991",
             "1989",
             "1993"
         ],
         correctAnswer: "1989"
-    },
-    
+    }
 ];
 
 // Set initial question index
