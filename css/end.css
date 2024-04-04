@@ -55,7 +55,9 @@ p {
     padding: 20px;
     text-align: center;
 }
-
+#score{
+    color: black;
+}
 
 .score-box {
     position: relative;

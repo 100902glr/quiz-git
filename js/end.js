@@ -15,32 +15,33 @@ function nextQuestion() {
     currentQuestionElement.style.display = "none";
     currentQuestion++;
     const nextQuestionElement = document.getElementById("question" + currentQuestion);
-    if (nextQuestionElement) {
+   
         nextQuestionElement.style.display = "block";
-    } else {
-        showResult();
-    }
+   
 }
 
-function showResult() {
-    // updateScore(totalCorrect); // Deze functie lijkt niet gedefinieerd te zijn, zorg ervoor dat je deze hebt gedefinieerd als dat nodig is
-    document.getElementById("result").textContent = "Je hebt " + totalCorrect + " van de 10 vragen goed beantwoord.";
 
-    // Verwijder de scoreparameter uit de URL
-    var url = window.location.href.split("?")[0] + "?quiz=nl"; // Basis-URL met de gewenste querystring
-    window.history.replaceState({}, document.title, url); // Vervang de huidige URL in de geschiedenis zonder de scoreparameter
-
-    // Navigeer naar de eindpagina
-    window.location.href = "end.html?quiz=nl";
-}
 
 function updateScore(score) {
     const scoreElement = document.getElementById("score");
     scoreElement.textContent = score;
 
     const scoreBox = document.querySelector(".score-box");
-    const percent = (score / 15) * 100;
+
+    if (score < 5) {
+        const red = 255;
+        const green = Math.round((score / 5) * 255);
+        scoreBox.style.backgroundColor = `rgb(${red}, ${green}, 0)`;
+    } else if (score >= 5 && score < 10) {
+        const red = Math.round(((10 - score) / 5) * 255);
+        const green = 255;
+        scoreBox.style.backgroundColor = `rgb(${red}, ${green}, 0)`;
+    } else if (score == 10) {
+        scoreBox.style.backgroundColor = "green";
+    }
 }
+
+
 
 // document.getElementById("question1").style.display = "block";
 
