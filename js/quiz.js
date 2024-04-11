@@ -151,9 +151,11 @@ function selectAnswer(e){
 function showScore(){
     resetState();
     questionElement.innerHTML = "You scored " + score + " out of " + "10";
-    nextButton.innerHTML = "Show results"
+    nextButton.innerHTML = "Show results";
+    nextButton.setAttribute("onclick", "window.location.href = 'end.html?quiz=nl&score='");
     nextButton.style.display = "block";
 }
+
 
 function handleNextButton(){
     currentQuestionIndex++;
