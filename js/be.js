@@ -1,76 +1,76 @@
 var questions = [
     {
-        question: "Wat is het favoriete snackgerecht van Belgen, bestaande uit frietjes met mayonaise?",
+        question: "Wat is de bijnaam van het Belgische nationale voetbalteam ?",
         choices: [
-            "Mosselen met friet",
-            "Stoofvlees met friet",
-            "Balletjes in tomatensaus met friet",
-            "Frikandel speciaal"
+            "Rode Duivels",
+            "Duivels",
+            "Rode Duivel",
+            "Duivel"
         ],
-        correctAnswer: "Stoofvlees met friet"
+        correctAnswer: "Rode Duivels"
     },
     {
-        question: "Welk beroemd Belgisch stripfiguur heeft een hond genaamd Bobbie en woont in een molen?",
+        question: "Welk Belgisch stripverhaal gaat over een jongen die graag 0avonturen beleeft met zijn hond ?",
         choices: [
             "Suske en Wiske",
-            "Kuifje",
-            "Jommeke",
-            "Nero"
-        ],
-        correctAnswer: "Kuifje"
-    },
-    {
-        question: "Welk Belgisch gerecht bestaat uit mosselen gekookt in witte wijn en geserveerd met friet?",
-        choices: [
-            "Mosselen met friet",
-            "Stoofvlees met friet",
-            "Kip met friet",
-            "Garnaalkroketten"
-        ],
-        correctAnswer: "Mosselen met friet"
-    },
-    {
-        question: "Wat is de bijnaam van het beroemdste Belgische bier, dat ook wel 'het vloeibare brood' wordt genoemd?",
-        choices: [
-            "Leffe",
-            "Chimay",
-            "Duvel",
-            "Westvleteren 12"
-        ],
-        correctAnswer: "Leffe"
-    },
-    {
-        question: "Welk bekend Belgisch stripfiguur woont in een molen en heeft een vriendin genaamd Suzie?",
-        choices: [
-            "Suske en Wiske",
-            "Kuifje",
-            "Jommeke",
-            "Nero"
+            "Lucky Luke",
+            "Nero",
+            "Kuifje"
         ],
         correctAnswer: "Suske en Wiske"
     },
     {
-        question: "Wat is de meest voorkomende voornaam bij Belgische mannen?",
-        correctAnswer: "Jan"
+        question: "Wat is het grootste jaarlijkse muziekfestival van België ?",
+        choices: [
+            "Coachella",
+            "Tomorrowland",
+            "Glastonbury",
+            "Woodstock"
+        ],
+        correctAnswer: "Tomorrowland"
     },
     {
-        question: "Wat is het favoriete onderwerp van discussie onder Belgen?",
-        correctAnswer: "Het weer"
+        question: "Welk Belgisch gerecht is een stoofpot van vlees, uien en bier ?",
+        choices: [
+            "Boeuf Bourguignon",
+            "Coq au Vin",
+            "Stoofvlees",
+            "Carbonnade Flamande"
+        ],
+        correctAnswer: "Carbonnade Flamande"
     },
     {
-        question: "Wat is de populairste Belgische sport na voetbal?",
-        correctAnswer: "Wielrennen"
+        question: "Welk Belgisch stripfiguur staat bekend om zijn voorliefde voor eten en slapen ?",
+        choices: [
+            "Suske",
+            "Guust Flater",
+            "Kuifje",
+            "Lucky Luke"
+        ],
+        correctAnswer: "Guust Flater"
     },
     {
-        question: "Wat is het favoriete gezelschapsspel van Belgen, gespeeld met kleine pionnen en dobbelstenen?",
-        correctAnswer: "Monopoly"
+        question: "Naam van het Belgische koningshuis ?",
+        correctAnswer: "Saksen Coburg"
     },
     {
-        question: "Wat is een typisch Belgische gewoonte tijdens het winkelen?",
-        correctAnswer: "Veel handtassen dragen"
+        question: "Wie is de huidige koning van België ?",
+        correctAnswer: "Filip"
     },
     {
-        question: "Welk Belgisch stripfiguur staat bekend om zijn blauwe huid en witte muts?",
+        question: "Wat is de naam van de Belgische nationale luchtvaartmaatschappij ?",
+        correctAnswer: "Brussels Airlines"
+    },
+    {
+        question: "Welke stad staat bekend om zijn middeleeuwse architectuur en kasseienstraatjes ?",
+        correctAnswer: "Brugge"
+    },
+    {
+        question: "Hoe heet de hoogste berg in België ?",
+        correctAnswer: "Signal de Botrange"
+    },
+    {
+        question: "Welk Belgisch stripfiguur staat bekend om zijn blauwe huid en witte muts ?",
         choices: [
             "Kuifje",
             "Suske en Wiske",
@@ -80,7 +80,7 @@ var questions = [
         correctAnswer: "Smurfen"
     },
     {
-        question: "Wat is de bijnaam van het beroemde Belgische bier dat in een speciaal glas wordt geserveerd met een aangepaste schuimkraag?",
+        question: "Wat is de bijnaam van het beroemde Belgische bier dat in een speciaal glas wordt geserveerd met een aangepaste schuimkraag ?",
         choices: [
             "Duvel",
             "Chimay",
@@ -90,7 +90,7 @@ var questions = [
         correctAnswer: "Duvel"
     },
     {
-        question: "Welke Belgische stad is wereldberoemd om zijn diamantindustrie?",
+        question: "Welke Belgische stad is wereldberoemd om zijn diamantindustrie ?",
         choices: [
             "Antwerpen",
             "Brugge",
@@ -100,7 +100,7 @@ var questions = [
         correctAnswer: "Antwerpen"
     },
     {
-        question: "Welk Belgisch stripfiguur is een kleine jongen die avonturen beleeft met zijn vrienden Flip de papegaai en Filiberke?",
+        question: "Welk Belgisch stripfiguur is een kleine jongen die avonturen beleeft met zijn vrienden Flip de papegaai en Filiberke ?",
         choices: [
             "Suske en Wiske",
             "Kuifje",
@@ -110,7 +110,7 @@ var questions = [
         correctAnswer: "Jommeke"
     },
     {
-        question: "Wat is de hoofdstad van België?",
+        question: "Wat is België vooral bekend om ?",
         choices: [
             "Brugge",
             "Gent",
@@ -120,23 +120,23 @@ var questions = [
         correctAnswer: "Brussel"
     },
     {
-        question: "Welke beroemde Belgische schilder wordt geassocieerd met het fauvisme en is bekend om zijn levendige kleurgebruik?",
-        correctAnswer: "René Magritte"
+        question: "Welke rivier stroomt door Antwerpen ?",
+        correctAnswer: "Schelde"
     },
     {
-        question: "Wat is het nationale gerecht van België, bestaande uit gestoofd rundvlees in bier, op smaak gebracht met kruiden?",
-        correctAnswer: "Stoofvlees"
+        question: "Wat is het belangrijkste exportproduct van België ?",
+        correctAnswer: "Chocolade"
     },
     {
-        question: "Welke Belgische zangeres staat bekend om hits als 'If I Could Turn Back Time' en 'Believe'?",
-        correctAnswer: "Helmut Lotti"
+        question: "Welk Belgisch stripverhaal gaat over een jongen en zijn hond ?",
+        correctAnswer: "Kuifje"
     },
     {
-        question: "Welk Belgisch bier staat bekend als 'het bruine bier'?",
+        question: "Welk Belgisch bier staat bekend als 'het bruine bier' ?",
         correctAnswer: "Leffe"
     },
     {
-        question: "Welke Belgische stad staat bekend om zijn middeleeuwse architectuur en jaarlijkse Gentse Feesten?",
+        question: "Welke Belgische stad staat bekend om zijn middeleeuwse architectuur en jaarlijkse Gentse Feesten ?",
         correctAnswer: "Gent"
     }
 ];
