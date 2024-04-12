@@ -5,38 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duitsland Quiz</title>
     <link rel="stylesheet" href="../css/du.css">
+    <link rel="stylesheet" href='../css/pop_up.css'.css>
 </head>
 <body>
+    <div class="quiz-container"></div>
+    <div class="quiz-content"></div>
+    <div class="popup-overlay" id="popupOverlay">
+
+        <div class="popup" id="popup">
+
+            <span class="close" id="closePopup">&times;</span>
+
+            <div class="popup-content">
+                <p class="kennis"> 🌍 Klaar om je kennis te testen ? </p>
+                <p>In totaal zijn er 15 vragen, waarvan 10 gesloten vragen en 5 open vragen.</p>
+            </div>
+
+        </div>
+
+    </div>
     <main>
         <div class="question">
-            <h2 id="questionText">Question Placeholder</h2>
+            <h2 id="questionText">Vragen voorbeeld</h2> <!--In geval als JS niet werkt.-->
+            <div id="questionNumber"></div>
             <form>
                 <div class="choices">
-                    <div class="choice">
-                        <input type="radio" id="option_a" name="capital" value="berlin">
-                        <label for="option_a">A) Berlin</label>
-                    </div>
-                    <div class="choice">
-                        <input type="radio" id="option_b" name="capital" value="munich">
-                        <label for="option_b">B) Munich</label>
-                    </div>
+                    <!-- De keuzes voor de vragen zullen worden ingevuld door JavaScript -->
                 </div>
-                <div class="choices">
-                    <div class="choice">
-                        <input type="radio" id="option_c" name="capital" value="frankfurt">
-                        <label for="option_c">C) Frankfurt</label>
-                    </div>
-                    <div class="choice">
-                        <input type="radio" id="option_d" name="capital" value="hamburg">
-                        <label for="option_d">D) Hamburg</label>
-                    </div>
-                </div>
+                <p id="feedback"></p>
                 <input type="button" id="submitAnswer" value="Antwoord indienen">
                 <input type="button" id="nextQuestion" style="display:none;" value="Volgende vraag">
+                <div id="openQuestionAnswer" style="display:none;">
+                    <input type="text" id="openAnswer" placeholder="Typ hier uw antwoord">
+                </div>
             </form>
         </div>
     </main>
     
     <script src="../js/du.js"></script>
+    <script src="../js/pop.js"></script>
 </body>
 </html>

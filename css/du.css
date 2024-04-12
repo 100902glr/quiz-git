@@ -107,3 +107,31 @@ input[type="button"] {
 input[type="button"]:hover {
     background-color: rgb(255, 120, 0); /* Donkerder oranje bij hover */
 }
+#openAnswer {
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    /* Randkleur */
+    border-radius: 5px;
+    /* Afgeronde hoeken */
+    margin-top: 10px;
+    /* Bovenmarge toegevoegd */
+    width: 100%;
+    /* Volledige breedte */
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    /* Achtergrondkleur */
+    color: #333;
+    /* Tekstkleur */
+}
+
+/* Focusstijl voor open antwoordveld */
+#openAnswer:focus {
+    outline: none;
+    /* Geen focus outline */
+    border-color: rgb(255, 120, 0);
+    /* Randkleur bij focus */
+    box-shadow: 0 0 5px rgb(255, 120, 0);
+    /* Schaduw bij focus */
+}
