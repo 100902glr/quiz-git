@@ -3,8 +3,17 @@ html{
 }
 body {
   margin: 0;
+  font-family: myFont;
+  overflow: hidden;
 }
-
+@font-face {
+  font-family: "myFont";
+  src: url("../fonts/horseshoes_and_lemonade/horseshoes.ttf") format("truetype");
+}
+@font-face {
+  font-family: "myFont2";
+  src: url("../fonts/komyca/Komyca3Dfreeversion-Italic.ttf") format("truetype");
+}
 .background-container {
   position: fixed;
   top: 0;

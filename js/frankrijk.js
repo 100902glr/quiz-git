@@ -1,145 +1,140 @@
 var questions = [
     {
-        question: "Wat is de bijnaam van het Belgische nationale voetbalteam ?",
+        question: "Wat is de hoofdstad van Frankrijk?",
         choices: [
-            "Rode Duivels",
-            "Duivels",
-            "Rode Duivel",
-            "Duivel"
+            "Londen",
+            "Parijs",
+            "Berlijn",
+            "Madrid"
         ],
-        correctAnswer: "Rode Duivels"
+        correctAnswer: "Parijs"
     },
     {
-        question: "Welk Belgisch stripverhaal gaat over een jongen die graag 0avonturen beleeft met zijn hond ?",
+        question: "Wat is de nationale taal van Frankrijk?",
         choices: [
-            "Suske en Wiske",
-            "Lucky Luke",
-            "Nero",
-            "Kuifje"
+            "Duits",
+            "Engels",
+            "Spaans",
+            "Frans"
         ],
-        correctAnswer: "Suske en Wiske"
+        correctAnswer: "Frans"
     },
     {
-        question: "Wat is het grootste jaarlijkse muziekfestival van België ?",
+        question: "Welke Franse stad staat bekend om zijn carnaval?",
         choices: [
-            "Coachella",
-            "Tomorrowland",
-            "Glastonbury",
-            "Woodstock"
+            "Nice",
+            "Lyon",
+            "Marseille",
+            "Toulouse"
         ],
-        correctAnswer: "Tomorrowland"
+        correctAnswer: "Nice"
     },
     {
-        question: "Welk Belgisch gerecht is een stoofpot van vlees, uien en bier ?",
+        question: "Wie schreef 'Les Misérables'?",
+        choices: [
+            "Victor Hugo",
+            "Alexandre Dumas",
+            "Gustave Flaubert",
+            "Émile Zola"
+        ],
+        correctAnswer: "Victor Hugo"
+    },
+    {
+        question: "Welk Frans gerecht wordt gemaakt van rauwe vis?",
         choices: [
             "Boeuf Bourguignon",
             "Coq au Vin",
-            "Stoofvlees",
-            "Carbonnade Flamande"
+            "Quiche Lorraine",
+            "Tartare"
         ],
-        correctAnswer: "Carbonnade Flamande"
+        correctAnswer: "Tartare"
     },
     {
-        question: "Welk Belgisch stripfiguur staat bekend om zijn voorliefde voor eten en slapen ?",
+        question: "Wie was een beroemde Franse schilder en beeldhouwer, een van de grondleggers van het kubisme?",
         choices: [
-            "Suske",
-            "Guust Flater",
-            "Kuifje",
-            "Lucky Luke"
+            "Claude Monet",
+            "Henri Matisse",
+            "Pablo Picasso",
+            "Vincent van Gogh"
         ],
-        correctAnswer: "Guust Flater"
+        correctAnswer: "Pablo Picasso"
     },
     {
-        question: "Naam van het Belgische koningshuis ?",
-        correctAnswer: "Saksen Coburg"
+        question: "Wat is de naam van de Franse nationale luchtvaartmaatschappij?",
+        correctAnswer: "Air France"
     },
     {
-        question: "Wie is de huidige koning van België ?",
-        correctAnswer: "Filip"
-    },
-    {
-        question: "Wat is de naam van de Belgische nationale luchtvaartmaatschappij ?",
-        correctAnswer: "Brussels Airlines"
-    },
-    {
-        question: "Welke stad staat bekend om zijn middeleeuwse architectuur en kasseienstraatjes ?",
-        correctAnswer: "Brugge"
-    },
-    {
-        question: "Hoe heet de hoogste berg in België ?",
-        correctAnswer: "Signal de Botrange"
-    },
-    {
-        question: "Welk Belgisch stripfiguur staat bekend om zijn blauwe huid en witte muts ?",
+        question: "Welke Franse zanger is bekend om 'La vie en rose'?",
         choices: [
-            "Kuifje",
-            "Suske en Wiske",
-            "Smurfen",
-            "Jommeke"
+            "Edith Piaf",
+            "Charles Aznavour",
+            "Jacques Brel",
+            "Serge Gainsbourg"
         ],
-        correctAnswer: "Smurfen"
+        correctAnswer: "Edith Piaf"
     },
     {
-        question: "Wat is de bijnaam van het beroemde Belgische bier dat in een speciaal glas wordt geserveerd met een aangepaste schuimkraag ?",
+        question: "Welk Frans monument is een van de meest bezochte ter wereld?",
         choices: [
-            "Duvel",
-            "Chimay",
-            "Leffe",
-            "Westvleteren 12"
+            "Eiffeltoren",
+            "Arc de Triomphe",
+            "Notre-Dame",
+            "Louvre"
         ],
-        correctAnswer: "Duvel"
+        correctAnswer: "Eiffeltoren"
     },
     {
-        question: "Welke Belgische stad is wereldberoemd om zijn diamantindustrie ?",
+        question: "Wat is de naam van de langste rivier van Frankrijk?",
+        correctAnswer: "Loire"
+    },
+    {
+        question: "Welk Frans eiland in de Middellandse Zee staat bekend om zijn lavendelvelden?",
+        correctAnswer: "Corsica"
+    },
+    {
+        question: "Welke Franse stad is bekend om zijn jaarlijkse filmfestival?",
+        correctAnswer: "Cannes"
+    },
+    {
+        question: "Wat is de naam van het bekende Franse gebakje gemaakt van bladerdeeg?",
         choices: [
-            "Antwerpen",
-            "Brugge",
-            "Gent",
-            "Luik"
+            "Croissant",
+            "Éclair",
+            "Macaron",
+            "Mille-feuille"
         ],
-        correctAnswer: "Antwerpen"
+        correctAnswer: "Mille-feuille"
     },
     {
-        question: "Welk Belgisch stripfiguur is een kleine jongen die avonturen beleeft met zijn vrienden Flip de papegaai en Filiberke ?",
-        choices: [
-            "Suske en Wiske",
-            "Kuifje",
-            "Jommeke",
-            "Nero"
-        ],
-        correctAnswer: "Jommeke"
+        question: "Welke Franse stad staat bekend om zijn gotische kathedraal?",
+        correctAnswer: "Chartres"
     },
     {
-        question: "Wat is België vooral bekend om ?",
-        choices: [
-            "Brugge",
-            "Gent",
-            "Brussel",
-            "Antwerpen"
-        ],
-        correctAnswer: "Brussel"
+        question: "Wat is de naam van de Franse nationale feestdag?",
+        correctAnswer: "Quatorze Juillet"
     },
     {
-        question: "Welke rivier stroomt door Antwerpen ?",
-        correctAnswer: "Schelde"
+        question: "Welke Franse schrijver schreef 'De Vreemdeling'?",
+        correctAnswer: "Albert Camus"
     },
     {
-        question: "Wat is het belangrijkste exportproduct van België ?",
-        correctAnswer: "Chocolade"
+        question: "Wat is het bekendste wijngebied in Frankrijk?",
+        correctAnswer: "Bordeaux"
     },
     {
-        question: "Welk Belgisch stripverhaal gaat over een jongen en zijn hond ?",
-        correctAnswer: "Kuifje"
+        question: "Welke Franse koning bouwde het Paleis van Versailles?",
+        correctAnswer: "Lodewijk XIV"
     },
     {
-        question: "Welk Belgisch bier staat bekend als 'het bruine bier' ?",
-        correctAnswer: "Leffe"
+        question: "Wat is de bijnaam van de inwoners van Marseille?",
+        correctAnswer: "Marseillais"
     },
     {
-        question: "Welke Belgische stad staat bekend om zijn middeleeuwse architectuur en jaarlijkse Gentse Feesten ?",
-        correctAnswer: "Gent"
+        question: "Welk Frans kasteel is gelegen in de Loire-vallei en staat op de UNESCO Werelderfgoedlijst?",
+        correctAnswer: "Château de Chambord"
     }
 ];
+
 
 
 
@@ -152,6 +147,7 @@ function displayQuestion() {
     var questionElement = document.getElementById("questionText");
     var choicesElement = document.getElementsByClassName("choices")[0];
     var openQuestionAnswer = document.getElementById("openQuestionAnswer");
+    var selectedChoice = null;
 
     // Toon de huidige vraag
     questionElement.textContent = questions[currentQuestion].question;
@@ -299,7 +295,7 @@ function nextQuestionOrEndQuiz() {
         document.getElementById("submitAnswer").style.display = "inline"; // Toon de knop voor het indienen van antwoorden
     } else {
         // Beëindig de quiz en ga naar de eindpagina
-        window.location.href = "end.html?quiz=be&score=" + totalCorrect;
+        window.location.href = "info.html?quiz=fr&score=" + totalCorrect;
     }
 }
 

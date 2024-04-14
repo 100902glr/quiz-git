@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../media/french.png');
+    background-image: url('https://www.hdwallpapers.in/download/blue_lighting_paris_eiffel_tower_france_during_nighttime_4k_hd_travel-HD.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -9,14 +9,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    font-family: myFont;
 }
 @font-face {
     font-family: "myFont";
-    src: url("../fonts/horseshoes_and_lemonade/Truculenta-VariableFont_opsz\,wdth\,wght.ttf") format("truetype");
+    src: url("../fonts/horseshoes_and_lemonade/horseshoes.ttf") format("truetype");
 }
 @font-face {
     font-family: "myFont2";
-    src: url("../fonts/komyca/DonegalOne-Regular.ttf") format("truetype");
+    src: url("../fonts/komyca/Komyca3Dfreeversion-Italic.ttf") format("truetype");
 }
 
 main {
@@ -72,12 +74,6 @@ input[type="submit"] {
     justify-content: space-between; /* Evenly distribute choices */
     margin-bottom: 10px;
     outline: none;
-
-    
-}
-.choiceButton.clicked {
-    /* Donkerder maken van de achtergrondkleur */
-    background-color: rgb(0, 94, 255);
 }
 
 
@@ -87,6 +83,20 @@ input[type="submit"] {
     /* Voeg een overgang toe voor een soepele animatie */
     transition: background-color 0.3s ease;
 }
+input[type="radio"] {
+    margin-right: 0;
+    appearance: none;
+
+}
+
+.choice:has(input[type="radio"]:checked) {
+    background-color: rgba(0, 140, 255, 0.521);
+  }
+  
+  .choice:hover, label:hover {
+    cursor: pointer;
+}
+
 
 /* Voeg een hover effect toe */
 
@@ -113,11 +123,6 @@ input[type="button"] {
     margin-top: 10px; /* Bovenmarge toevoegen */
 }
 
-input[type="button"]:hover {
-    background-color: rgb(0, 94, 255); /* Donkerder oranje bij hover */
-    filter: brightness(90%);
-
-}
 
 
 

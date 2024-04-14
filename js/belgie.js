@@ -1,126 +1,149 @@
-// Define an array of questions and their corresponding correct answers
 var questions = [
     {
-        question: "Hoeveel steden en dorpen zijn er in Duitsland?",
+        question: "Wat is de bijnaam van het Belgische nationale voetbalteam ?",
         choices: [
-            "80000",
-            "16000",
-            "478",
-            "22000"
+            "Rode Duivels",
+            "Duivels",
+            "Rode Duivel",
+            "Duivel"
         ],
-        correctAnswer: "80000"
+        correctAnswer: "Rode Duivels"
     },
     {
-        question: "Welke rivier stroomt door Berlijn, de hoofdstad van Duitsland?",
+        question: "Welk Belgisch stripverhaal gaat over een jongen die graag 0avonturen beleeft met zijn hond ?",
         choices: [
-            "Rijn",
-            "Elbe",
-            "Donau",
-            "Spree"
+            "Suske en Wiske",
+            "Lucky Luke",
+            "Nero",
+            "Kuifje"
         ],
-        correctAnswer: "Spree"
+        correctAnswer: "Suske en Wiske"
     },
     {
-        question: "Wie was de eerste bondskanselier van West-Duitsland na de Tweede Wereldoorlog?",
+        question: "Wat is het grootste jaarlijkse muziekfestival van België ?",
         choices: [
-            "Angela Merkel",
-            "Konrad Adenauer",
-            "Helmut Kohl",
-            "Willy Brandt"
+            "Coachella",
+            "Tomorrowland",
+            "Glastonbury",
+            "Woodstock"
         ],
-        correctAnswer: "Konrad Adenauer"
+        correctAnswer: "Tomorrowland"
     },
     {
-        question: "Wat is de naam van de Duitse munteenheid vóór de invoering van de euro?",
+        question: "Welk Belgisch gerecht is een stoofpot van vlees, uien en bier ?",
         choices: [
-            "Markka",
-            "Franc",
-            "Deutsche Mark",
-            "Lira"
+            "Boeuf Bourguignon",
+            "Coq au Vin",
+            "Stoofvlees",
+            "Carbonnade Flamande"
         ],
-        correctAnswer: "Deutsche Mark"
+        correctAnswer: "Carbonnade Flamande"
     },
     {
-        question: "Welke Duitse stad staat bekend om haar jaarlijkse Oktoberfest viering?",
+        question: "Welk Belgisch stripfiguur staat bekend om zijn voorliefde voor eten en slapen ?",
         choices: [
-            "Keulen",
-            "Stuttgart",
-            "München",
-            "Hamburg"
+            "Suske",
+            "Guust Flater",
+            "Kuifje",
+            "Lucky Luke"
         ],
-        correctAnswer: "München"
+        correctAnswer: "Guust Flater"
     },
     {
-        question: "Wat is de hoogste berg in Duitsland?",
+        question: "Naam van het Belgische koningshuis ?",
+        correctAnswer: "Saksen Coburg"
+    },
+    {
+        question: "Wie is de huidige koning van België ?",
+        correctAnswer: "Filip"
+    },
+    {
+        question: "Wat is de naam van de Belgische nationale luchtvaartmaatschappij ?",
+        correctAnswer: "Brussels Airlines"
+    },
+    {
+        question: "Welke stad staat bekend om zijn middeleeuwse architectuur en kasseienstraatjes ?",
+        correctAnswer: "Brugge"
+    },
+    {
+        question: "Hoe heet de hoogste berg in België ?",
+        correctAnswer: "Signal de Botrange"
+    },
+    {
+        question: "Welk Belgisch stripfiguur staat bekend om zijn blauwe huid en witte muts ?",
         choices: [
-            "Mont Blanc",
-            "Zugspitze",
-            "Matterhorn",
-            "Mount Everest"
+            "Kuifje",
+            "Suske en Wiske",
+            "Smurfen",
+            "Jommeke"
         ],
-        correctAnswer: "Zugspitze"
+        correctAnswer: "Smurfen"
     },
     {
-        question: "Welke autofabrikant heeft zijn hoofdkantoor in Wolfsburg, Duitsland?",
+        question: "Wat is de bijnaam van het beroemde Belgische bier dat in een speciaal glas wordt geserveerd met een aangepaste schuimkraag ?",
         choices: [
-            "Ford",
-            "BMW",
-            "Volkswagen",
-            "Mercedes-Benz"
+            "Duvel",
+            "Chimay",
+            "Leffe",
+            "Westvleteren 12"
         ],
-        correctAnswer: "Volkswagen"
+        correctAnswer: "Duvel"
     },
     {
-        question: "Welk beroemd sprookjesduo komt oorspronkelijk uit Duitsland?",
+        question: "Welke Belgische stad is wereldberoemd om zijn diamantindustrie ?",
         choices: [
-            "Assepoester en Prins Charmant",
-            "Hans en Grietje",
-            "Romeo en Julia",
-            "Belle en het Beest"
+            "Antwerpen",
+            "Brugge",
+            "Gent",
+            "Luik"
         ],
-        correctAnswer: "Hans en Grietje"
+        correctAnswer: "Antwerpen"
     },
     {
-        question: "Welke kleuren zitten er in de Duitse vlag?",
+        question: "Welk Belgisch stripfiguur is een kleine jongen die avonturen beleeft met zijn vrienden Flip de papegaai en Filiberke ?",
         choices: [
-            "Rood, wit en blauw",
-            "Groen, wit en rood",
-            "Zwart, rood en goud",
-            "Geel, zwart en rood"
+            "Suske en Wiske",
+            "Kuifje",
+            "Jommeke",
+            "Nero"
         ],
-        correctAnswer: "Zwart, rood en goud"
+        correctAnswer: "Jommeke"
     },
     {
-        question: "In welk jaar werd de Berlijnse Muur afgebroken?",
+        question: "Wat is België vooral bekend om ?",
         choices: [
-            "1985",
-            "1991",
-            "1989",
-            "1993"
+            "Brugge",
+            "Gent",
+            "Brussel",
+            "Antwerpen"
         ],
-        correctAnswer: "1989"
-    },
-     {
-        question: "Welke rivier stroomt door de stad Keulen?",
-        correctAnswer: "rijn"
+        correctAnswer: "Brussel"
     },
     {
-        question: "Wat is de Duitse naam voor Duitsland? ?",
-        correctAnswer: "Deutschland"
+        question: "Welke rivier stroomt door Antwerpen ?",
+        correctAnswer: "Schelde"
     },
     {
-        question: "Welke Duitse stad staat bekend om zijn jaarlijkse bierfestival, Oktoberfest??",
-        correctAnswer: "München"
+        question: "Wat is het belangrijkste exportproduct van België ?",
+        correctAnswer: "Chocolade"
     },
     {
-        question: "Wat is de naam van het Duitse nationale voetbalteam ?",
-        correctAnswer: "Die Mannschaft"
+        question: "Welk Belgisch stripverhaal gaat over een jongen en zijn hond ?",
+        correctAnswer: "Kuifje"
     },
     {
-        question: "Welke Duitse stad was de hoofdstad van het Heilige Roomse Rijk en staat bekend om zijn historische architectuur en monumenten?",
-        correctAnswer: "Aken"
+        question: "Welk Belgisch bier staat bekend als 'het bruine bier' ?",
+        correctAnswer: "Leffe"
+    },
+    {
+        question: "Welke Belgische stad staat bekend om zijn middeleeuwse architectuur en jaarlijkse Gentse Feesten ?",
+        correctAnswer: "Gent"
     }
 ];
+
+
+
+
 
 var totalQuestions = questions.length;
 var currentQuestion = 0;
@@ -129,6 +152,7 @@ function displayQuestion() {
     var questionElement = document.getElementById("questionText");
     var choicesElement = document.getElementsByClassName("choices")[0];
     var openQuestionAnswer = document.getElementById("openQuestionAnswer");
+    var selectedChoice = null;
 
     // Toon de huidige vraag
     questionElement.textContent = questions[currentQuestion].question;
@@ -276,7 +300,7 @@ function nextQuestionOrEndQuiz() {
         document.getElementById("submitAnswer").style.display = "inline"; // Toon de knop voor het indienen van antwoorden
     } else {
         // Beëindig de quiz en ga naar de eindpagina
-        window.location.href = "end.html?quiz=be&score=" + totalCorrect;
+        window.location.href = "info.html?quiz=be&score=" + totalCorrect;
     }
 }
 

@@ -1,149 +1,126 @@
+// Define an array of questions and their corresponding correct answers
 var questions = [
     {
-        question: "Wat is de bijnaam van het Nederlands nationale voetbalteam?",
+        question: "Hoeveel steden en dorpen zijn er in Duitsland?",
         choices: [
-            "Oranje Leeuwen",
-            "Leeuwen",
-            "Oranje Tijgers",
-            "Rode Duivels"
+            "80000",
+            "16000",
+            "478",
+            "22000"
         ],
-        correctAnswer: "Oranje Leeuwen"
+        correctAnswer: "80000"
     },
     {
-        question: "Welk Nederlands stripverhaal gaat over een jongen en zijn hond?",
+        question: "Welke rivier stroomt door Berlijn, de hoofdstad van Duitsland?",
         choices: [
-            "Jan, Jans en de Kinderen",
-            "Sjors en Sjimmie",
-            "Donald Duck",
-            "Tom Poes"
+            "Rijn",
+            "Elbe",
+            "Donau",
+            "Spree"
         ],
-        correctAnswer: "Tom Poes"
+        correctAnswer: "Spree"
     },
     {
-        question: "Wat is het grootste jaarlijkse muziekfestival van Nederland?",
+        question: "Wie was de eerste bondskanselier van West-Duitsland na de Tweede Wereldoorlog?",
         choices: [
-            "Coachella",
-            "Glastonbury",
-            "Tomorrowland",
-            "Pinkpop"
+            "Angela Merkel",
+            "Konrad Adenauer",
+            "Helmut Kohl",
+            "Willy Brandt"
         ],
-        correctAnswer: "Pinkpop"
+        correctAnswer: "Konrad Adenauer"
     },
     {
-        question: "Welk Nederlands gerecht is een stamppot van aardappelen, boerenkool en worst?",
+        question: "Wat is de naam van de Duitse munteenheid vóór de invoering van de euro?",
         choices: [
-            "Erwtensoep",
-            "Zuurkool",
-            "Boerenkool",
-            "Hutspot"
+            "Markka",
+            "Franc",
+            "Deutsche Mark",
+            "Lira"
         ],
-        correctAnswer: "Boerenkool"
+        correctAnswer: "Deutsche Mark"
     },
     {
-        question: "Welk Nederlands stripfiguur staat bekend om zijn avonturen met zijn hond Dribbel?",
+        question: "Welke Duitse stad staat bekend om haar jaarlijkse Oktoberfest viering?",
         choices: [
-            "Donald Duck",
-            "Sjors en Sjimmie",
-            "Bassie",
-            "Dribbel"
+            "Keulen",
+            "Stuttgart",
+            "München",
+            "Hamburg"
         ],
-        correctAnswer: "Dribbel"
+        correctAnswer: "München"
     },
     {
-        question: "Naam van het Nederlands koningshuis?",
-        correctAnswer: "Oranje-Nassau"
-    },
-    {
-        question: "Wie is de huidige koning van Nederland?",
-        correctAnswer: "Willem-Alexander"
-    },
-    {
-        question: "Wat is de naam van de Nederlandse nationale luchtvaartmaatschappij?",
-        correctAnswer: "KLM (Koninklijke Luchtvaart Maatschappij)"
-    },
-    {
-        question: "Welke stad staat bekend om zijn grachten en historische gebouwen?",
-        correctAnswer: "Amsterdam"
-    },
-    {
-        question: "Hoe heet het hoogste punt in Nederland?",
-        correctAnswer: "Vaalsberg"
-    },
-    {
-        question: "Welk Nederlands stripfiguur staat bekend om zijn rode haren en blauwe broek?",
+        question: "Wat is de hoogste berg in Duitsland?",
         choices: [
-            "Dribbel",
-            "Bassie",
-            "Suske",
-            "Kuifje"
+            "Mont Blanc",
+            "Zugspitze",
+            "Matterhorn",
+            "Mount Everest"
         ],
-        correctAnswer: "Suske"
+        correctAnswer: "Zugspitze"
     },
     {
-        question: "Wat is de bijnaam van het beroemde Nederlands biermerk uit Heineken?",
+        question: "Welke autofabrikant heeft zijn hoofdkantoor in Wolfsburg, Duitsland?",
         choices: [
-            "Grolsch",
-            "Amstel",
-            "Hertog Jan",
-            "Heineken"
+            "Ford",
+            "BMW",
+            "Volkswagen",
+            "Mercedes-Benz"
         ],
-        correctAnswer: "Heineken"
+        correctAnswer: "Volkswagen"
     },
     {
-        question: "Welke Nederlandse stad staat bekend om zijn havens en scheepvaart?",
+        question: "Welk beroemd sprookjesduo komt oorspronkelijk uit Duitsland?",
         choices: [
-            "Amsterdam",
-            "Utrecht",
-            "Den Haag",
-            "Rotterdam"
+            "Assepoester en Prins Charmant",
+            "Hans en Grietje",
+            "Romeo en Julia",
+            "Belle en het Beest"
         ],
-        correctAnswer: "Rotterdam"
+        correctAnswer: "Hans en Grietje"
     },
     {
-        question: "Welk Nederlands stripfiguur is een avontuurlijke journalist met zijn hond Bobbie?",
+        question: "Welke kleuren zitten er in de Duitse vlag?",
         choices: [
-            "Tom Poes",
-            "Donald Duck",
-            "Sjors en Sjimmie",
-            "Kuifje"
+            "Rood, wit en blauw",
+            "Groen, wit en rood",
+            "Zwart, rood en goud",
+            "Geel, zwart en rood"
         ],
-        correctAnswer: "Kuifje"
+        correctAnswer: "Zwart, rood en goud"
     },
     {
-        question: "Wat is Nederland vooral bekend om?",
+        question: "In welk jaar werd de Berlijnse Muur afgebroken?",
         choices: [
-            "Klompen",
-            "Molens",
-            "Kaas",
-            "Tulpen"
+            "1985",
+            "1991",
+            "1989",
+            "1993"
         ],
-        correctAnswer: "Kaas"
+        correctAnswer: "1989"
+    },
+     {
+        question: "Welke rivier stroomt door de stad Keulen?",
+        correctAnswer: "rijn"
     },
     {
-        question: "Welke rivier stroomt door Utrecht?",
-        correctAnswer: "De Rijn"
+        question: "Wat is de Duitse naam voor Duitsland? ?",
+        correctAnswer: "Deutschland"
     },
     {
-        question: "Wat is het belangrijkste exportproduct van Nederland?",
-        correctAnswer: "Bloemen"
+        question: "Welke Duitse stad staat bekend om zijn jaarlijkse bierfestival, Oktoberfest??",
+        correctAnswer: "München"
     },
     {
-        question: "Welk Nederlands stripverhaal gaat over een man die avonturen beleeft met zijn hond?",
-        correctAnswer: "Sjors en Sjimmie"
+        question: "Wat is de naam van het Duitse nationale voetbalteam ?",
+        correctAnswer: "Die Mannschaft"
     },
     {
-        question: "Welk Nederlands bier staat bekend als 'het groene bier'?",
-        correctAnswer: "Grolsch"
-    },
-    {
-        question: "Welke Nederlandse stad staat bekend om zijn kaasmarkten en grachten?",
-        correctAnswer: "Alkmaar"
+        question: "Welke Duitse stad was de hoofdstad van het Heilige Roomse Rijk en staat bekend om zijn historische architectuur en monumenten?",
+        correctAnswer: "Aken"
     }
 ];
-
-
-
-
 
 var totalQuestions = questions.length;
 var currentQuestion = 0;
@@ -152,7 +129,6 @@ function displayQuestion() {
     var questionElement = document.getElementById("questionText");
     var choicesElement = document.getElementsByClassName("choices")[0];
     var openQuestionAnswer = document.getElementById("openQuestionAnswer");
-    var selectedChoice = null;
 
     // Toon de huidige vraag
     questionElement.textContent = questions[currentQuestion].question;
@@ -300,7 +276,7 @@ function nextQuestionOrEndQuiz() {
         document.getElementById("submitAnswer").style.display = "inline"; // Toon de knop voor het indienen van antwoorden
     } else {
         // Beëindig de quiz en ga naar de eindpagina
-        window.location.href = "info.html?quiz=nl&score=" + totalCorrect;
+        window.location.href = "info.html?quiz=be&score=" + totalCorrect;
     }
 }
 

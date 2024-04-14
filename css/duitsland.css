@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../media/duitsland.jpeg');
+    background-image: url('https://wallpaperaccess.com/full/2205929.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -9,6 +9,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: myFont;
+    overflow: hidden;
 }
 @font-face {
     font-family: "myFont";
@@ -59,7 +61,16 @@ form {
 
 input[type="radio"] {
     margin-right: 0;
+    appearance: none;
 }
+.choice:hover, label:hover {
+    cursor: pointer;
+}
+
+.choice:has(input[type="radio"]:checked) {
+    background-color: rgba(255, 119, 0, 0.466);
+  }
+  
 
 input[type="submit"] {
     background-color: red;

@@ -1,0 +1,169 @@
+body {
+    font-family: "myFont2";
+    src: url("../fonts/komyca/DonegalOne-Regular.ttf") format("truetype");
+    background-image: url("https://th.bing.com/th/id/R.ab771d78ce14702793eaf1ed1f4858f4?rik=rmSTaEmb7qczCQ&pid=ImgRaw&r=0");
+    /* Achtergrondafbeelding van de Belgische vlag */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: myFont;
+  }
+  
+  /* Lettertypen */
+  @font-face {
+    font-family: "myFont";
+    src: url("../fonts/horseshoes_and_lemonade/horseshoes.ttf") format("truetype");
+}
+@font-face {
+    font-family: "myFont2";
+    src: url("../fonts/komyca/Komyca3Dfreeversion-Italic.ttf") format("truetype");
+}
+  /* Hoofdsectie */
+  main {
+    padding: 20px;
+  }
+  
+  /* Vraagvak */
+  .question {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparante zwarte achtergrond */
+    padding: 50px;
+    /* Padding toegevoegd voor ruimte */
+    border-radius: 40px;
+    text-align: center;
+    max-width: 600px;
+    /* Maximale breedte toegevoegd voor responsiviteit */
+    margin: 0 auto;
+    /* Gecentreerd op de pagina */
+  }
+  
+  /* Vraagtitel */
+  .question h2 {
+    color: rgb(255, 255, 255);
+    /* Witte tekstkleur */
+    font-size: 40px;
+    font-family: myFont;
+  }
+  
+  /* Feedbacktekst */
+  .question p {
+    font-size: 30px;
+    font-family: myFont;
+  }
+  
+  /* Formulier */
+  form {
+    margin-top: 10px;
+  }
+  
+  /* Radio-knoppen */
+  input[type="radio"] {
+      margin-right: 0;
+      appearance: none;
+      
+  }
+  .choice:has(input[type="radio"]:checked) {
+      background-color: rgba(255, 119, 0, 0.466);
+    }
+    .choice:hover, label:hover {
+      cursor: pointer;
+  }
+  
+  
+  /* Knop voor antwoord indienen */
+  input[type="submit"],
+  input[type="button"] {
+    background-color: rgb(255, 120, 0);
+    /* Rode achtergrondkleur */
+    color: white;
+    /* Witte tekstkleur */
+    padding: 10px 20px;
+    /* Padding toegevoegd */
+    border: none;
+    /* Geen rand */
+    border-radius: 5px;
+    /* Afgeronde hoeken */
+    cursor: pointer;
+    /* Cursor veranderen naar pointer bij hover */
+    font-family: myFont;
+    /* Lettertype instellen */
+    font-size: 25px;
+    /* Tekengrootte aanpassen */
+    margin: 20px;
+    /* Buitenmarge toegevoegd */
+  }
+  
+  /* Keuzelijst */
+  .choices {
+    display: flex;
+    flex-wrap: wrap;
+    /* Laat items naar de volgende regel gaan */
+    justify-content: space-between;
+    /* Evenredig verdeelde keuzes */
+    margin-bottom: 10px;
+  }
+  .choice:hover, label:hover {
+      cursor: pointer;
+  }
+  
+  
+  /* Keuzevak */
+  .choice,
+  .submitAnswer {
+    flex-basis: 48%;
+    /* Breedte aangepast om twee keuzes in een rij te passen */
+    background-color: rgb(255, 120, 0);
+    /* Blauwe achtergrondkleur */
+    border-radius: 20px;
+    /* Afgeronde hoeken */
+    font-size: 20px;
+    font-family: myFont2;
+    /* Lettertype voor keuzes */
+    margin-top: 10px;
+    /* Bovenmarge toegevoegd */
+  }
+  
+  /* Hovers voor knoppen */
+  input[type="submit"]:hover,
+  input[type="button"]:hover {
+      background-color: rgba(255, 0, 0, 0.432);
+      
+    /* Donkerrode achtergrondkleur bij hover */
+  }
+  
+  /* Aanvullende stijl voor open antwoordveld */
+  #openAnswer {
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    /* Randkleur */
+    border-radius: 5px;
+    /* Afgeronde hoeken */
+    margin-top: 10px;
+    /* Bovenmarge toegevoegd */
+    width: 100%;
+    /* Volledige breedte */
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    /* Achtergrondkleur */
+    color: #333;
+    /* Tekstkleur */
+  }
+  
+  /* Focusstijl voor open antwoordveld */
+  #openAnswer:focus {
+    outline: none;
+    /* Geen focus outline */
+    border-color: rgb(255, 120, 0);
+    /* Randkleur bij focus */
+    box-shadow: 0 0 5px rgb(255, 120, 0);
+    /* Schaduw bij focus */
+  }
+  
