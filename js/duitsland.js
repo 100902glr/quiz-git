@@ -276,7 +276,7 @@ function nextQuestionOrEndQuiz() {
         document.getElementById("submitAnswer").style.display = "inline"; // Toon de knop voor het indienen van antwoorden
     } else {
         // Beëindig de quiz en ga naar de eindpagina
-        window.location.href = "info.html?quiz=be&score=" + totalCorrect;
+        window.location.href = "info.html?quiz=du&score=" + totalCorrect;
     }
 }
 
